@@ -106,3 +106,14 @@ Acrescentar no banco de dados o relacionamento da chave primária com chave estr
 
 Multer é um middleware node.js para manipulação multipart/form-data, usado para o upload de arquivos. 
 ### npm install --save multer
+
+
+USANDO O GIT
+### git status
+### git add .
+### git commit -m "Descrição clada das aletrações que foram feitas"
+### git push origin main
+
+Puxa os dados do REPOSYT para o VS CODE para manter a sincronização e evitar conflitos
+### git pull origin main
+
