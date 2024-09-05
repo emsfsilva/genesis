@@ -6,3 +6,6 @@ node_modules/
 
 # Ignorar arquivos temporários
 *.tmp
+
+# Ignorar arquivo .env
+.env

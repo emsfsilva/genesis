@@ -15,6 +15,14 @@ router.get('/', eAdmin, async (req, res) => {
         const { page = 1 } = req.query;
         const limit = 40;
 
+        if (req.user.situationId === 4) {
+            req.logout(req.user, () => {
+                req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+                res.redirect('/login');
+            });
+            return; // Impede que o código continue após o logoff
+        }
+
 
         // INICIO DIARIAS DIM
         if (req.user.dataValues.omeId == 2){ 

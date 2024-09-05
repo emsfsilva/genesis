@@ -10,14 +10,15 @@ module.exports = {
   async up (queryInterface) {
     // Cadastrar o registro na tabela "users"
     return queryInterface.bulkInsert('users', [{
+      
       matricula: '1157590',
       name: 'Cb Francisco',
       email: 'ems.fsilva.pe@gmail.com',
       situationId: 1,
       omeId: 1,
       pcontasOmeId : 1,
-      loginsei : 'emerson.francisco',
-      password: await bcrypt.hash('1157590', 8),
+      loginsei : 'emerson.francisco1',
+      password: await bcrypt.hash('Sd1157590', 8),
       telefone : '(81) 9.8685-4814',
       createdAt: new Date(),
       updatedAt: new Date()

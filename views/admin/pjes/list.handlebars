@@ -73,7 +73,7 @@
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = `SJES_DPO_{{nomeMes}}_2024_${idEvento}.xlsx`;
+            a.download = `SJES_{{profile.PcontasOme.dataValues.nome}}_{{nomeMes}}_{{nomeAno}}_${idEvento}.xlsx`;
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
@@ -128,12 +128,13 @@
 
                                 
                                 <div style="margin-top: 1px; margin-bottom: 1px;"
-                                    class="col-md-2 col-sm-4 col-xs-6  tile_stats_count">
-                                    <span class="count_top"><i class="fa fa-thumbs-o-down"></i> Excesso (R$)</span>
-                                    <div style="font-size: 35px;" class="count red">{{valorttServExc}}</div>
+                                    class="col-md-2 col-sm-4 col-xs-6  tile_stats_count"> 
+                                    <span class="count_top"><i class="fa fa-thumbs-o-down"></i> Excesso | Impedido</span>
+                                    <div style="font-size: 35px;" class="count red">{{ttServExc}} | {{contagemImpedidos}} </div>
                                     <span class="count_bottom red"><i class="">{{ttServExcOf}} Of</i> | <i class="">{{ttServExcPrc}}
-                                            Prc</i></span>
+                                            Prc</i> (Excesso)</span>
                                 </div>
+                                
                                 <div style="margin-top: 1px; margin-bottom: 1px;"
                                     class="col-md-2 col-sm-4 col-xs-6  tile_stats_count">
                                     <span class="count_top"><i class="fa fa-code-fork"></i> Atrasado</span>
@@ -249,10 +250,13 @@
                                                                     <td class="">{{'ome.nome'}}</td>
                                                                     <td class="">{{total_cotaofexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaofexe_multiplicado}} </i></td>
-
                                                                     <td class="">{{total_cotaprcexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                    <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                                 </tr>
                                                             {{/each}}
                                                         </tbody>
@@ -370,17 +374,21 @@
 
                                                                     <td class="">{{total_cotaprcexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                    <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                                 </tr>
                                                             {{/each}}
                                                         </tbody>
                                                     </table>
                                                 </div>
                                                 
-                                            <!-- /FIM EXECUÇÃO DIM -->
+                                            <!-- /FIM EXECUÇÃO DIRESP -->
                                         </div>
 
-                                        <!-- /INICIO SALDO DIM -->
+                                        <!-- /INICIO SALDO DIRESP -->
                                         <h3 style="margin-bottom: 2px; margin-right: 2px;">
                                             Planejado:<small><span class="count_bottom"><i
                                                         class="valor">{{valorFinalDistDiresp}} </i></span></small></h3>
@@ -395,7 +403,7 @@
                                                             class="fa fa-sort-asc"></i></i></span></small>
                                         </h3>
                                         </br></br>
-                                        <!-- /FIM SALDO DIM -->
+                                        <!-- /FIM SALDO DIRESP -->
                                     </div>
                                 </div>
                                 <!-- FIM DIRESP -->
@@ -483,10 +491,13 @@
                                                                     <td class="">{{'ome.nome'}}</td>
                                                                     <td class="">{{total_cotaofexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaofexe_multiplicado}} </i></td>
-
                                                                     <td class="">{{total_cotaprcexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                    <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                                 </tr>
                                                             {{/each}}
                                                         </tbody>
@@ -601,7 +612,11 @@
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaofexe_multiplicado}} </i></td>
                                                                     <td class="td_unidades_right">{{total_cotaprcexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                    <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                                 </tr>
                                                             {{/each}}
                                                         </tbody>
@@ -717,7 +732,11 @@
 
                                                                     <td class="">{{total_cotaprcexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                    <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                                 </tr>
                                                             {{/each}}
                                                         </tbody>
@@ -747,11 +766,6 @@
                                 </div>
                                 <!-- FIM DPO -->    
 
-
-
-
-
-
                                 </br></br>
 
                                 <div class="x_title">
@@ -762,7 +776,6 @@
                                 </div>
 
                                 </br></br>
-
 
                                 <!-- INICIO PE -->
                                 <div>
@@ -851,7 +864,11 @@
 
                                                                     <td class="">{{total_cotaprcexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                    <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                                 </tr>
                                                             {{/each}}
                                                         </tbody>
@@ -968,7 +985,11 @@
 
                                                                     <td class="">{{total_cotaprcexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                    <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                                 </tr>
                                                             {{/each}}
                                                         </tbody>
@@ -1085,7 +1106,11 @@
 
                                                                     <td class="">{{total_cotaprcexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                    <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                                 </tr>
                                                             {{/each}}
                                                         </tbody>
@@ -1202,7 +1227,11 @@
 
                                                                     <td class="">{{total_cotaprcexe}}</td>
                                                                     <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                    <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                                 </tr>
                                                             {{/each}}
                                                         </tbody>
@@ -1318,7 +1347,11 @@
 
                                                                 <td class="">{{total_cotaprcexe}}</td>
                                                                 <td class="td_unidades_right"><i class="valor">{{total_cotaprcexe_multiplicado}} </i></td>
-                                                                <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                {{#ifEquals ../profile.situationId 1}}
+                                                                        <td> | <a href="/pjes/pjesgercota/{{id}}" title="Editar Registro"> <i class="fa fa-key"></i> </a></td>
+                                                                    {{else}}
+                                                                        <td> | <i class="fa fa-lock"></i></td>
+                                                                    {{/ifEquals}}
                                                             </tr>
                                                         {{/each}}
                                                     </tbody>
@@ -1356,8 +1389,13 @@
                             <div class="col-sm-7 mail_view">
                                 <div class="inbox-body">
                                     <div class="view-mail card-box table-responsive">
+
+                                        {{#ifEquals profile.situationId 1}}
+                                            <a href="/pjes/add" type="button" class="btn btn-sm btn_event btn-block" type="button">ADICIONAR EVENTOS</a>
+                                        {{else}}
+                                            <a href="" type="button" class="btn btn-sm btn_event btn-block" type="button">EVENTOS CADASTRADOS</a>
+                                        {{/ifEquals}}
                                         
-                                        <a href="/pjes/add" type="button" class="btn btn-sm btn_event btn-block" type="button">ADICIONAR EVENTOS</a>
                                         <table id="datatable" style="width:100%; font-size: 9px">
                                             {{>_msgAdm}}
                                             <thead>
@@ -1373,7 +1411,6 @@
                                             </thead>
                                             <tbody>
                                                 {{#each pjes}}
-                                                
                                                     <tr>
                                                         <td>{{ome.nome}}</td>
                                                         <td>{{operacao}}</td>
@@ -1384,18 +1421,21 @@
                                                         <td {{#gt cotaprcdist count_pg_prc}} style="background-color: rgb(167, 221, 164); color: rgb(32, 126, 45);"{{/gt}}>
                                                             {{cotaprcdist}} | {{count_pg_prc}}
                                                         </td>
-                                                        <td>
-                                                            <a href="/pjes/view/{{id}}" title="Editar Registro"><i
-                                                                    class="fa fa-eye"></i></a>
-                                                            <a href="/pjes/edit/{{id}}" title="Editar Registro"><i
-                                                                    class="fa fa-edit"></i></a>
-                                                            <a href="/pjes/delete/{{id}}"
-                                                                onclick="return confirm('Tem certeza que deseja excluir este registro?')"
-                                                                title="Excluir Registro"><i
-                                                                    class="fa fa-trash text-danger"></i></a>
-                                                        </td>
+
+                                                        {{#ifEquals ../profile.situationId 1}}
+                                                            <td>
+                                                                <a href="/pjes/view/{{id}}" title="Visualizar Registro"><i class="fa fa-eye"></i></a>
+                                                                <a href="/pjes/edit/{{id}}" title="Editar Registro"><i class="fa fa-edit"></i></a>
+                                                                <a href="/pjes/delete/{{id}}" onclick="return confirm('Tem certeza que deseja excluir este registro?')" title="Excluir Registro"><i class="fa fa-trash text-danger"></i></a>
+                                                            </td>
+                                                        {{else}}
+                                                            <td>
+                                                                <i class="fa fa-lock"></i>
+                                                            </td>
+                                                        {{/ifEquals}}
                                                     </tr>
-                                                    {{/each}}
+                                                {{/each}}
+
                                             </tbody>
                                         </table>
                                     </div>

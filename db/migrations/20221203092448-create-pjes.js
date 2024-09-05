@@ -10,11 +10,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       operacao: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         collate: 'utf8mb4_general_ci'
       },
       evento: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         collate: 'utf8mb4_general_ci'
       },
       cotaofdist: {
@@ -24,19 +24,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       mes: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       obs: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(200),
         collate: 'utf8mb4_general_ci'
       },
       sei: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(20),
         collate: 'utf8mb4_general_ci'
       },
       ano: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       createdAt: {

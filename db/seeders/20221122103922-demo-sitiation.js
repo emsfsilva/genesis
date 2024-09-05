@@ -7,22 +7,22 @@ module.exports = {
   async up (queryInterface) {
     // Cadastrar o registro na tabela "situations"
     return queryInterface.bulkInsert('situations', [{
-      nameSituation: 'Ativo',
+      nameSituation: 'Tecnico',
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
-      nameSituation: 'Inativo',
+      nameSituation: 'Gestão',
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
-      nameSituation: 'Descadastrado',
+      nameSituation: 'Administrativo',
       createdAt: new Date(),
       updatedAt: new Date()
     },
     {
-      nameSituation: 'Spam',
+      nameSituation: 'Comum',
       createdAt: new Date(),
       updatedAt: new Date()
     }]);

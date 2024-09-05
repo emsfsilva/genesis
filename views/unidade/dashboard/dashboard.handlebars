@@ -1,49 +1,165 @@
+<!-- FullCalendar CSS -->
+<link href='https://unpkg.com/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+<link href='https://unpkg.com/fullcalendar@5.11.3/list.min.css' rel='stylesheet' />
+
+<!-- FullCalendar JS -->
+<script src='https://unpkg.com/fullcalendar@5.11.3/main.min.js'></script>
+<script src='https://unpkg.com/fullcalendar@5.11.3/list.min.js'></script>
+<script src='https://unpkg.com/fullcalendar@5.11.3/locales/pt-br.js'></script> <!-- Script para o locale pt-BR -->
+
 <style>
+  .watermark {
+    position: absolute; /* Permite o posicionamento da marca d'água */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição da imagem para que ela fique realmente centralizada */
+    opacity: 0.2; /* Ajusta a transparência da marca d'água */
+    pointer-events: none; /* Faz com que a imagem não interfira com cliques e outras interações */
+  }
 
-.watermark {
-  position: absolute; /* Permite o posicionamento da marca d'água */
-  top: 20%; /* Centraliza verticalmente */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta a posição da imagem para que ela fique realmente centralizada */
-  opacity: 0.5; /* Ajusta a transparência da marca d'água */
-  pointer-events: none; /* Faz com que a imagem não interfira com cliques e outras interações */
-}
-
-.watermark img {
-  width: 300px; /* Define a largura específica da imagem */
-  height: 300px; /* Define a altura específica da imagem */
-}
-
-
+  .watermark img {
+    width: 300px; /* Define a largura específica da imagem */
+    height: 300px; /* Define a altura específica da imagem */
+  }
 </style>
 
-
-
 <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
+<div class="right_col" role="main">
+  <div class="">
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Genesis</h2>
             <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12  ">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Genesis</h2>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
+          </div>
+          <div class="x_content">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Escalas <small>Interna</small></h2>
+                  <div class="clearfix"></div>
+                </div>
 
-                      <div class="right_col" style="background: rgb(255, 255, 255);" role="main">
-                      <div class="watermark">
-                        <img src="/images/logo/logo_dpo_ppt_oficial.png" alt="Marca d'água">
+                <div class="col-md-7 x_panel">
+                  <!-- start of user-activity-graph -->
+                  <div id="myCustomCalendar" style="width:100%; height:100%;"></div></br></br>
+
+                  <script id="data" type="application/json">{{{eventosFullCalendar}}}</script>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      var eventosJson = document.getElementById('data').textContent;
+                      console.log('Conteúdo da tag <script>:', eventosJson);
+                      try {
+                        var eventos = JSON.parse(eventosJson);
+                        console.log('Eventos do servidor:', eventos);
+                        var calendarEl = document.getElementById('myCustomCalendar');
+
+                        var calendar = new FullCalendar.Calendar(calendarEl, {
+                          initialView: 'dayGridMonth',
+                          locales: ['pt-br'],
+                          locale: 'pt-br',
+                          events: eventos,
+                          eventColor: '#378006',
+                          eventClick: function(info) {
+                            // Atualiza o conteúdo do modal com os dados do evento
+                            document.getElementById('title2').value = info.event.title;
+                            document.getElementById('descr2').value = info.event.extendedProps.description;
+
+                            // Exibe o modal
+                            $('#CalenderModalDetalhes').modal('show');
+                          },
+                          headerToolbar: {
+                            left: 'prev,next',
+                            center: 'title',
+                            right: 'dayGridMonth,listMonth'
+                          },
+                          views: {
+                            dayGridMonth: { displayEventTime: false }
+                          },
+                          listMonth: { buttonText: 'Lista do Mês' }
+                        });
+
+                        calendar.render();
+                      } catch (e) {
+                        console.error('Erro ao analisar o JSON dos eventos:', e);
+                      }
+                    });
+                  </script>
+                  <!-- end of user-activity-graph -->
+
+                  <!-- /calendar modal -->
+                  <div id="CalenderModalDetalhes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="x_panel col-md-12 col-sm-12">
+                        <div class="modal-content">
+                          <div class="x_title">
+                            <h2>Escala</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                              <li><a href=""><i class="fa fa-mail-forward text-warning"> Permuta</i></a></li>
+                              <li><a href=""><i class="fa fa-trash text-danger"> Cancelar</i></a></li>
+                              <li><a href=""><i class="fa fa-book text-success"> Relatorio</i></a></li>
+                              <li><a href=""><i class="fa fa-info text-primary"> Inf Erro</i></a></li>
+                            </ul>
+                          </div>
+
+                          <div style="background: rgb(255, 255, 255);" class="modal-body">
+                            <div class="watermark">
+                              <img src="/images/logo/logo_dpo_ppt_oficial.png" alt="Marca d'água">
+                            </div>
+                            <div id="testmodal2" style="padding: 5px 20px;">
+                              <form id="antoform2" class="form-horizontal calender" role="form">
+                                <div class="form-group">
+                                  <div class="col-sm-12">
+                                    <label class="control-label">Operação</label>
+                                    <input type="text" style="font-size:11px; background:transparent;" class="form-control" id="title2" name="title2">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="col-sm-12">
+                                    <label class="control-label">Informações</label>
+                                    <textarea class="form-control" style="height:500px; background:transparent; font-size:11px;" id="descr2" name="descr"></textarea>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <button type="button" class="btn btn-primary antoclose2" data-dismiss="modal">Fechar</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  </div>
+                  <!-- /calendar modal -->
+                </div>
 
-
+                <div class="col-md-5">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Historico<small></small></h2>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content" style="height: 427px; overflow-y: scroll;">
+                      <article class="media event">
+                        <a class="pull-left date">
+                          <p class="month">AGO</p>
+                          <p class="day">30</p>
+                        </a>
+                        <div class="media-body">
+                          <a class="title" href="#">Prestação de Contas - AGO</a>
+                          <p>Pendente</p>
+                        </div>
+                      </article>
+                      <hr>
+                                          </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- /page content -->
-
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /page content -->

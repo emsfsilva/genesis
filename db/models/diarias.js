@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       diarias.belongsTo(models.omes, { foreignKey: 'idome' });
       diarias.belongsTo(models.omes, { foreignKey: 'idfpg', as: 'idfpgOme' });
       //tabela diarias pertence à tabela diretorias usando a chave estrangeira iddiretorias.
-      diarias.belongsTo(models.diretorias, { foreignKey: 'iddiretorias' });
+      diarias.belongsTo(models.diretorias, { foreignKey: 'iddiretoria' });
       // tabela diarias pertence à tabela users usando a chave estrangeira iduser.
       diarias.belongsTo(models.users, { foreignKey: 'iduser' });
       //tabela diarias tem muitas escalas, onde idevento na tabela escalas é a chave estrangeira que referencia diarias.

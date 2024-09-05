@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     operacao: DataTypes.STRING,
     cod: DataTypes.INTEGER,
     nunfunc: DataTypes.INTEGER,
+    nunvinc: DataTypes.INTEGER,
     matricula: DataTypes.STRING,
     nome: DataTypes.STRING,
     telefone: DataTypes.STRING,

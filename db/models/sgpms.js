@@ -16,6 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING,
     nunfunc: DataTypes.STRING,
     localap: DataTypes.STRING,
+    mes: DataTypes.STRING,
+    ano: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'sgpms',

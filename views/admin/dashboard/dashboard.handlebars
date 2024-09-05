@@ -1,438 +1,368 @@
+<!-- FullCalendar CSS -->
+<link href='https://unpkg.com/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+<link href='https://unpkg.com/fullcalendar@5.11.3/list.min.css' rel='stylesheet' />
+
+<!-- FullCalendar JS -->
+<script src='https://unpkg.com/fullcalendar@5.11.3/main.min.js'></script>
+<script src='https://unpkg.com/fullcalendar@5.11.3/list.min.js'></script>
+<script src='https://unpkg.com/fullcalendar@5.11.3/locales/pt-br.js'></script> <!-- Script para o locale pt-BR -->
+
 
 
 <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-            <div class="clearfix"></div>
-            <style>
-  .ul{
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      font color:black;
-  }
-  .li{
-    
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-  }
-  
-</style>
+<div class="right_col" role="main">
+  <div class="">
+    <div class="clearfix"></div>
+
+          <style>
+              .ul{
+                  padding: 0;
+                  margin: 0;
+                  list-style-type: none;
+                  font color:black;
+              }
+              .li{
+                
+                padding: 0;
+                margin: 0;
+                display: inline-block;
+              }
+
+              /* Adiciona uma borda direita na segunda coluna */
+                td:nth-child(7),
+                th:nth-child(7) {
+                  border-right: 2px solid #000; /* Ajuste a cor e a largura da borda conforme necessário */
+                }
+
+              /* Estiliza a célula do título */
+              .border-title {
+                text-align: center; /* Alinha o texto no centro */
+                border-bottom: 2px solid #000; /* Adiciona uma borda inferior ao título */
+                font-weight: bold; /* Faz o texto em negrito */
+              }
 
 
-  <div class="row">
-    <div class="col-md-12">
-      <div class="x_panel">
-        <div class="x_title">
-          <h2>Dashboard <small>Genesis</small></h2>
-          <div class="filter">
-            <div id="" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-              <i class=""></i>
-              <span>Produção</span> <b class=""></b>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <div class="x_panel">
-          <div class="col-md-8 col-sm-8 ">
-            <div class="demo-container">
-              Valores Absolutos
-                  <table class="countries_list">
-                    <tbody>
-                    <tr>
-                        <td>PMPE</td>
-                          <td class="fs15 fw700 text-left">OF: 2510</td>
-                          <td class="fs15 fw700 text-left">PRÇ: 19348</td>
-                          <td class="fs15 fw700 text-right">VALOR (R$): 4.622,600</td>
-                      </tr>
-                      <tr>
-                        <td>PATRULHA ESCOLAR</td>
-                          <td class="fs15 fw700 text-left">OF: 136</td>
-                          <td class="fs15 fw700 text-left">PRÇ: 9748</td>
-                          <td class="fs15 fw700 text-right">VALOR (R$): 1.990,400</td>
-                      </tr>
-                      <tr>
-                        <td>TI</td>
-                          <td class="fs15 fw700 text-left">OF: 418</td>
-                          <td class="fs15 fw700 text-left">PRÇ: 5583</td>
-                          <td class="fs15 fw700 text-right">VALOR (R$): 1.242.000</td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div> </br>
-            
-            <div id="mainb" style="height:300px;"></div>
+              /* Remove a borda padrão da tabela para garantir que só a borda especificada apareça */
+              table {
+                border-collapse: collapse; /* Garante que as bordas sejam colapsadas */
+                width: 100%; /* Faz a tabela usar toda a largura disponível */
+                font-size: 11px;
+              }
 
-              <div id="mainbprc" style="height:300px;"></div>
+              /* Adiciona bordas às células da tabela para garantir que a borda entre colunas seja visível */
+              td, th {
+                border: 1px solid #ddd; /* Adiciona uma borda leve para todas as células */
+              }
 
-          </div>
+          </style>
 
-          <div class="col-md-4 col-sm-4 ">
-            <div class="x_panel" style=" height:770px;">
-              <div>
-                <div>
-                  <div class="x_title">
-                    <h2>PJES <small>Saldo em Cotas</small></h2>    
-                  <div class="clearfix"></div>
-                    </div></br>
-                  <h2 class="count green">Oficiais: 64 <i class="fa fa-sort-asc"></i></h2>
-                  <h2 class="count green">Praças: 6.498 <i class="fa fa-sort-asc"></i></h2>
-                  <div class="clearfix"></div></br>
-                </div>
-
-                <div class="list-unstyled top_profiles scroll-view">
-                  <table class="countries_list">
-                    <tbody>
-                      <tr>
-                        <td class="count blue">DEZ</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">NOV</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">OUT</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">SET</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">AGO</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">JUL</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                        <td class="fs15 fw700 count text-right">0</td>
-                        <td class="fs15 fw700 count text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">JUN</td>
-                        <td class="fs15 fw700 count red text-right">0 <i class="fa fa-sort-desc"></i></td>
-                        <td class="fs15 fw700 count red text-right">R$ 0,00</td>
-                        <td class="fs15 fw700 count green text-right">683</td>
-                        <td class="fs15 fw700 count green text-right">R$ 136.600,00</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">MAI</td>
-                        <td class="fs15 fw700 count green text-right">48</td>
-                        <td class="fs15 fw700 count green text-right">R$ 14.400,00</td>
-                        <td class="fs15 fw700 count red text-right">-1.547 <i class="fa fa-sort-desc"></i></td>
-                        <td class="fs15 fw700 count red text-right">R$ 309.400,00</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">ABR</td>
-                        <td class="fs15 fw700 count green text-right">6</td>
-                        <td class="fs15 fw700 count green text-right">R$ 1.800,00</td>
-                        <td class="fs15 fw700 count green text-right">245</td>
-                        <td class="fs15 fw700 count green text-right">R$ 49.000,00</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">MAR</td>
-                        <td class="fs15 fw700 count red text-right">0 <i class="fa fa-sort-desc"></i></td>
-                        <td class="fs15 fw700 count red text-right">R$ 0,00</td>
-                        <td class="fs15 fw700 count green text-right">1.425</td>
-                        <td class="fs15 fw700 count green text-right">R$ 285.000,00</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">FEV</td>
-                        <td class="fs15 fw700 count red text-right"> 0 <i class="fa fa-sort-desc"></i></td>
-                        <td class="fs15 fw700 count red text-right">R$ 0,00</td>
-                        <td class="fs15 fw700 count green text-right">1.226</td>
-                        <td class="fs15 fw700 count green text-right">R$ 245.200,00</td>
-                      </tr>
-                      <tr>
-                        <td class="count blue">JAN</td>
-                        <td class="fs15 fw700 count green text-right">61</td>
-                        <td class="fs15 fw700 count green text-right">R$ 18.300,00</td>
-                        <td class="fs15 fw700 count green text-right">1.372</td>
-                        <td class="fs15 fw700 count green text-right">R$ 274.200,00</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-          <div class="col-md-12 x_panel">
-            <div class="">
-              <div class="col-md-3 tile">
-                <span>PDS 1º TRI/24</span>
-                <h5>R$ 2.896.080,00</h5>
-                <span class="sparkline11 graph" style="height: 160px;">
-                    <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
-                </span>
-              </div>
-              <div class="col-md-3 tile">
-                <span>PDS 2º TRI/24</span>
-                <h5>R$ 0,00</h5>
-                <span class="sparkline22 graph" style="height: 160px;">
-                      <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
-                </span>
-              </div>
-              <div class="col-md-3 tile">
-                <span>PDS 3º TRI/24</span>
-                <h5>R$ 0,00</h5>
-                <span class="sparkline11 graph" style="height: 160px;">
-                      <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
-                </span>
-              </div>
-              <div class="col-md-3 tile">
-                <span>PDS 4º TRI/24</span>
-                <h5>R$ 0,00</h5>
-                <span class="sparkline11 graph" style="height: 160px;">
-                      <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
-                </span>
-              </div>
-            </div>
-          </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="x_panel">
-        <div class="x_title">
-          <h2>Blocos Carnavalescos <small>Op Carnaval 2024</small></h2>
-          <ul class="nav navbar-right panel_toolbox">
-            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Settings 1</a>
-                  <a class="dropdown-item" href="#">Settings 2</a>
-                </div>
-            </li>
-            <li><a class="close-link"><i class="fa fa-close"></i></a>
-            </li>
-          </ul>
-          <div class="clearfix"></div>
-        </div>
-        <div class="x_content">
-
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="x_panel">
-        <div class="x_title">
-          <h2>Informações</h2>
-          <div class="filter">
-          </div>
-          <div class="clearfix"></div>
-        </div>
-
-        <div class="x_content">
-          <div class="col-md-12 col-sm-12 ">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>Valores Liberados</h2>    
-                <div class="clearfix"></div>
-              </div>
-                <div class="col-md-6 hidden-small">
-                  <table class="countries_list">
-                    <tbody>
-                      <tr>
-                        <td>Dezembro</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                        <td class="fs15 fw700 text-right">0 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                      <td>Novemnro</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                        <td class="fs15 fw700 text-right">0 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                      <td>Outubro</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                        <td class="fs15 fw700 text-right">0 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                      <td>Setembro</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                        <td class="fs15 fw700 text-right">0 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                      </tr>
-                      <tr>
-                      <td>Agosto</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                        <td class="fs15 fw700 text-right">0 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                      </tr>
-                      <td>Julho</td>
-                        <td class="fs15 fw700 text-right">R$ 5.936.040</td>
-                        <td class="fs15 fw700 green text-right">30.546 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 5. 498.280</td>
-                      </tr>
-                      <td>Junho</td>
-                        <td class="fs15 fw700 text-right">R$ 5.936.040</td>
-                        <td class="fs15 fw700 red text-right">0 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                      </tr>
-                      <td>Maio</td>
-                        <td class="fs15 fw700 text-right">R$ 5.936.040</td>
-                        <td class="fs15 fw700 red text-right">0 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 0</td>
-                      </tr>
-                      <td>Abril</td>
-                        <td class="fs15 fw700 text-right">R$ 5.936.040</td>
-                        <td class="fs15 fw700 green text-right">3.495 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 629.100</td>
-                      </tr>
-                      <td>Março</td>
-                        <td class="fs15 fw700 text-right">R$ 5.936.040</td>
-                        <td class="fs15 fw700 green text-right">4.019 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 723.420</td>
-                      </tr>
-                      <td>Fevereiro</td>
-                        <td class="fs15 fw700 text-right">R$ 5.936.040</td>
-                        <td class="fs15 fw700 green text-right">7.156 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 1.288.080</td>
-                      </tr>
-                      <td>Janeiro</td>
-                        <td class="fs15 fw700 text-right">R$ 5.936.040</td>
-                        <td class="fs15 fw700 green text-right">3.976 Ct(s)</td>
-                        <td class="fs15 fw700 text-right">R$ 715.680</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div id="echart_bar_horizontal" class="col-md-6 col-sm-12 " style="height:430px;"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-12">
-          <div class="x_panel">
-
-            <div class="x_title">
-              <h2>Escalas <small>Interna</small></h2>
-              <div class="clearfix"></div>
-            </div>
-
-              <div class="col-md-4 x_panel" >
-                <div id='calendar'></div>
-              </div>
-
-              <div class="col-md-4" >
-                <div class="x_panel">
-                    <div class="x_title">
-                      <h2>Ultimos Pg <small>PJES</small></h2>
-                      <div class="clearfix"></div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Dashboard <small>Genesis</small></h2>
+                  <div class="filter">
+                    <div id="" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                      <i class=""></i>
+                      <span>Produção</span> <b class=""></b>
                     </div>
-                    <div class="x_content" style="height: 500px; overflow-y: scroll;">
-                        <article class="media event">
-                            <a class="pull-left date">
-                              <p class="month">MAI</p>
-                              <p class="day">17</p>
-                            </a>
-                            <div class="media-body">
-                              <a class="title" href="#">PJES PMPE</a>
-                              <p>Pagamento Executado</p>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_panel">
+                  <div class="col-md-6 col-sm-12 ">
+                    <div class="demo-container">
+                          <table class="countries_list">
+                            <tbody>
+                            <tr>
+                                <td>PMPE</td>
+                                  <td class="fs15 fw700 text-left">OF: 2510</td>
+                                  <td class="fs15 fw700 text-left">PRÇ: 19348</td>
+                                  <td class="fs15 fw700 text-right">VALOR (R$): 4.622,600</td>
+                              </tr>
+                              <tr>
+                                <td>PATRULHA ESCOLAR</td>
+                                  <td class="fs15 fw700 text-left">OF: 136</td>
+                                  <td class="fs15 fw700 text-left">PRÇ: 9748</td>
+                                  <td class="fs15 fw700 text-right">VALOR (R$): 1.990,400</td>
+                              </tr>
+                              <tr>
+                                <td>TI</td>
+                                  <td class="fs15 fw700 text-left">OF: 418</td>
+                                  <td class="fs15 fw700 text-left">PRÇ: 5583</td>
+                                  <td class="fs15 fw700 text-right">VALOR (R$): 1.242.000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div> 
+                    </br>
+                    
+                    <div class="col-md-12 col-sm-12" id="mainb" style="height:300px;"></div>
+
+                    <div class="col-md-12 col-sm-12" id="mainbprc" style="height:300px;"></div>
+
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 ">
+                    <div class="x_panel" style="height:700px;">
+                      <div>
+                        <div>
+                          <div class="x_title">
+                            <h2>PJES <small>Saldo em Cotas</small></h2>    
+                            <div class="clearfix"></div>
+                          </div>
+                        </div>
+                        <!-- Inicio do Resumo -->
+                        <div>
+                            <!-- Inicio do anos -->
+                            <div class="col-md-2">
+                                <!-- required for floating -->
+                                <!-- Nav tabs -->
+                                <div class="nav nav-tabs flex-column bar_tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    {{!-- Agrupa os dados por ano e cria uma aba para cada ano --}}
+                                    {{#each (groupBy dados 'ano')}}
+                                        <a class="nav-link {{#if @first}}active{{/if}}" id="v-pills-home-tab-{{@index}}" data-toggle="pill" href="#v-pills-home{{@index}}" role="tab" aria-controls="v-pills-home" aria-selected="true">{{this.[0].ano}}</a>
+                                    {{/each}}
+                                </div>
                             </div>
-                          </article>
-                      <hr>
-                          <article class="media event">
-                            <a class="pull-left date">
-                              <p class="month">ABR</p>
-                              <p class="day">18</p>
-                            </a>
-                            <div class="media-body">
-                              <a class="title" href="#">PJES PMPE E TI</a>
-                              <p>Pagamento Executado</p>
+                            <!-- Fim do anos -->
+
+                            <!-- Inicio do Saldo -->
+                            <div class="col-md-10">
+                                <!-- Tab panes -->
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    {{!-- Cria o conteúdo para cada ano --}}
+                                    {{#each (groupBy dados 'ano')}}
+                                        <div class="tab-pane fade {{#if @first}}show active{{/if}}" id="v-pills-home{{@index}}" role="tabpanel" aria-labelledby="v-pills-home-tab-{{@index}}">
+                                            <div class="list-unstyled top_profiles scroll-view">
+                                                <table class="countries_list">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="border-title">Mês</th>
+                                                            <th class="border-title" style="padding: 5px;" colspan="2">Oficiais</th>
+                                                            <th class="border-title" style="padding: 5px;" colspan="2">Praças</th>
+                                                            <th class="border-title" style="padding: 5px;" colspan="2"><i class="fa fa-check-square-o"></i></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {{#each this}}
+                                                            <tr>
+                                                                <td class="count blue">{{mes}}</td>
+                                                                <td class="fs15 fw700 count text-right">{{total_cotaofdist_diff}}</td>
+                                                                <td class="fs15 fw700 count valor text-right">{{total_cotaofdist_multiplicado_diff}}</td>
+                                                                <td class="fs15 fw700 count text-right">{{total_cotaprcdist_diff}}</td>
+                                                                <td class="fs15 fw700 count valor text-right">{{total_cotaprcdist_multiplicado_diff}}</td>
+                                                                <td style="color: rgb(10, 235, 10);">
+                                                                    {{showIconIfTrue total_cotaofdist_diff}}
+                                                                </td>
+                                                            </tr>
+                                                        {{/each}}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    {{/each}}
+
+                                    <!-- /INICIO SALDO -->
+                                    <div class="">
+
+                                      <div class="" style="margin-top: 50px;">
+                                        <h2>Saldo [<small> Pós Fechamento </small>] </h2>
+                                          <p style="margin-bottom: 2px; text-align: right;">
+                                              OFICIAIS: <span class="count_bottom"><i
+                                                          class="green">{{data.SaldoTtCotaOfGeral}} <i class="fa fa-sort-asc"></i> Cota(s) </i></span></p>
+                                                          <hr style="margin-bottom: 2px; margin-top: 2px;"></hr>
+                                          <p style="margin-bottom: 2px; margin-top: 10px; text-align: right;">
+                                              PRAÇAS: <span class="count_bottom"><i
+                                                          class="green">{{data.SaldoTtCotaPrcGeral}} <i class="fa fa-sort-asc"></i> Cota(s) </i></span></p>
+                                          <hr style="margin-bottom: 2px; margin-top: 2px;"></hr>
+                                        </div>
+
+                                    </div>
+                                      <!-- /FIM SALDO-->
+                                </div>
                             </div>
-                          </article>
-                      <hr>
-                        <article class="media event">
-                        <a class="pull-left date">
-                          <p class="month">MAR</p>
-                          <p class="day">15</p>
-                        </a>
-                        <div class="media-body">
-                          <a class="title" href="#">PJES PMPE E TI</a>
-                          <p>Pagamento Executado</p>
+                            <!-- Fim do Saldo -->
+                            <div class="clearfix"></div>
                         </div>
-                      </article>
-                      <hr>
-                        <article class="media event">
-                        <a class="pull-left date">
-                          <p class="month">FEV</p>
-                          <p class="day">21</p>
-                        </a>
-                        <div class="media-body">
-                          <a class="title" href="#">PJES PMPE</a>
-                          <p>Pagamento Executado</p>
+                        <!-- Fim do Resumo -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                  <div class="col-md-12 x_panel">
+                    <div class="">
+                      <div class="col-md-3 tile">
+                        <span>PDS 1º TRI/24</span>
+                        <h5>R$ 2.896.080,00</h5>
+                        <span class="sparkline11 graph" style="height: 160px;">
+                            <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
+                        </span>
+                      </div>
+                      <div class="col-md-3 tile">
+                        <span>PDS 2º TRI/24</span>
+                        <h5>R$ 0,00</h5>
+                        <span class="sparkline22 graph" style="height: 160px;">
+                              <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
+                        </span>
+                      </div>
+                      <div class="col-md-3 tile">
+                        <span>PDS 3º TRI/24</span>
+                        <h5>R$ 0,00</h5>
+                        <span class="sparkline11 graph" style="height: 160px;">
+                              <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
+                        </span>
+                      </div>
+                      <div class="col-md-3 tile">
+                        <span>PDS 4º TRI/24</span>
+                        <h5>R$ 0,00</h5>
+                        <span class="sparkline11 graph" style="height: 160px;">
+                              <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Blocos Carnavalescos <small>Op Carnaval 2024</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Settings 1</a>
+                          <a class="dropdown-item" href="#">Settings 2</a>
                         </div>
-                      </article>
-                      <hr>
-                      <article class="media event">
-                        <a class="pull-left date">
-                          <p class="month">FEV</p>
-                          <p class="day">23</p>
-                        </a>
-                        <div class="media-body">
-                          <a class="title" href="#">PJES TI</a>
-                          <p>Pagamento Executado</p>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Informações</h2>
+                  <div class="filter">
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+
+                <div class="x_content">
+                  <div class="col-md-12 col-sm-12 ">
+                    <div class="x_panel">
+                      <div class="x_title">
+                        <h2>Valores Liberados</h2>    
+                        <div class="clearfix"></div>
+                      </div>
+
+                        <div class="col-md-6 hidden-small">
+                          <!-- Inicio do Resumo -->
+                        <div>
+                            <!-- Inicio do anos -->
+                            <div class="col-md-2">
+                                <!-- required for floating -->
+                                <!-- Nav tabs -->
+                                <div class="nav nav-tabs flex-column bar_tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    {{!-- Agrupa os dados por ano e cria uma aba para cada ano --}}
+                                    {{#each (groupBy dadoss 'ano')}}
+                                        <a class="nav-link {{#if @first}}active{{/if}}" id="v-pills-home-tab-{{@index}}" data-toggle="pill" href="#v-pills-home{{@index}}" role="tab" aria-controls="v-pills-home" aria-selected="true">{{this.[0].ano}}</a>
+                                    {{/each}}
+                                </div>
+                            </div>
+                            <!-- Fim do anos -->
+
+                            <!-- Inicio do Saldo -->
+                            <div class="col-md-10">
+                                <!-- Tab panes -->
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    {{!-- Cria o conteúdo para cada ano --}}
+                                    {{#each (groupBy dadoss 'ano')}}
+                                        <div class="tab-pane fade {{#if @first}}show active{{/if}}" id="v-pills-home{{@index}}" role="tabpanel" aria-labelledby="v-pills-home-tab-{{@index}}">
+                                            <div class="list-unstyled top_profiles scroll-view">
+                                                <table class="countries_list">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="border-title">Mês</th>
+                                                            <th class="border-title" style="padding: 5px;" colspan="1">Valor Liberado</th>
+                                                            <th class="border-title" style="padding: 5px;" colspan="2">Saldo</th>
+                                                            <th class="border-title" style="padding: 5px;" colspan="1"><i class="fa fa-check-square-o"></i></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {{#each this}}
+                                                            <tr>
+                                                                <td class="count blue">{{mes}}</td>
+                                                                <td class="valor text-right">{{teto_diaria_inicial}}</td>
+                                                                <td class="text-right">{{total_cotadist_diff}}</td>
+                                                                <td class="valor text-right">{{total_cotadist_multiplicado_diff}}</td>
+                                                                <td style="color: rgb(10, 235, 10);">
+                                                                    {{showIconIfTrue total_cotadist_diff}}
+                                                                </td>
+                                                            </tr>
+                                                        {{/each}}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    {{/each}}
+
+                                    <!-- /INICIO SALDO -->
+                                    <div class="">
+                                      <div style="margin-top: 20px;">
+                                        <p style="margin-bottom: 2px; text-align: right;">
+                                            <span class="count_bottom">Saldo: <i class="green">{{data.SaldoTtCotaGeral}} <i class="fa fa-sort-asc"></i> Cota(s) </i></span>
+                                        </p>                  
+                                      </div>
+                                    </div>
+                                      <!-- /FIM SALDO-->
+                                </div>
+                                <hr style="margin-bottom: 2px; margin-top: 2px;"></hr>
+                            </div>
+                            
+                            <!-- Fim do Saldo -->
+                            <div class="clearfix"></div>
                         </div>
-                      </article>
+                        <!-- Fim do Resumo -->
+
+                        </div>
+
+                        <div id="echart_bar_horizontal" class="col-md-6 col-sm-12 " style="height:430px;"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-
-              <div class="col-md-4" style="height: 500px; overflow-y: scroll;">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Unidades</h2>
-                    <div class="clearfix"></div>
-                  </div> 
-                </div>
-              </div>
-
-
-
+            </div>
           </div>
 
-
-        </div>
-
-      </div>
-    </div>
   </div>
-          </div>
-        </div>
-        <!-- /page content -->
+</div>
+<!-- /page content -->
 
+
+<!-- /FORMATAR A CELULA NO FORMATO DE MOEDA BRASILEIRA -->
+<script>
+    var elementos = document.querySelectorAll('.valor');
+    elementos.forEach(function(elemento) {
+    var valor = parseFloat(elemento.textContent);
+    elemento.textContent = valor.toLocaleString('pt-BR', {style: 'currency',currency: 'BRL'});
+    });
+
+</script>

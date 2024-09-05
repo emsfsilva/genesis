@@ -13,8 +13,8 @@ const yup = require('yup');
 const Sequelize = require('sequelize');
 const Excel = require('exceljs');
 
-
 router.get('/', eAdmin, async (req, res) => {
+
             const nomeMes = req.session.mes;
             const mes = req.session.mes;
             const nomeAno = req.session.ano;
@@ -23,6 +23,15 @@ router.get('/', eAdmin, async (req, res) => {
             const { page = 1 } = req.query;
             const limit = 40;
             var lastPage = 1;
+
+
+    if (req.user.situationId === 4) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
 
     // INICIO DIM ------------------------------------------------------------------------------------------------------------------------------------------------
     if (req.user.dataValues.omeId == 2){ 
@@ -732,13 +741,23 @@ router.get('/', eAdmin, async (req, res) => {
 
             //TOTAL DE POLICIAIS IMPEDIDOS COM COTA NA OME | COUNT   
             const contagemImpedidos = await db.escalas.count({
-                attributes: ['id','operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome','telefone','status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
-                    where: Sequelize.literal(`
-                        DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}' AND
-                        YEAR(data_inicio) = ${nomeAno} AND
-                        idome = ${2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17} AND
-                        status = 'IMPEDIDO'`),
+                attributes: ['id', 'operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome', 'telefone', 'status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
+                where: {
+                    data_inicio: {
+                        [Op.and]: [
+                            Sequelize.literal(`DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}'`),
+                            Sequelize.literal(`YEAR(data_inicio) = ${nomeAno}`)
+                        ]
+                    },
+                    idome: {
+                        [Op.in]: [2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+                    },
+                    status: {
+                        [Op.like]: 'IMPEDIDO%'
+                    }
+                }
             });
+
             
 
             // INICIO BLOCO QUE CONTA A QUANTIDADE REMANESCENTE DE OFICIAS E PRAÇAS
@@ -1580,12 +1599,21 @@ router.get('/', eAdmin, async (req, res) => {
 
             //TOTAL DE POLICIAIS IMPEDIDOS COM COTA NA OME | COUNT   
             const contagemImpedidos = await db.escalas.count({
-                attributes: ['id','operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome','telefone','status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
-                    where: Sequelize.literal(`
-                        DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}' AND
-                        YEAR(data_inicio) = ${nomeAno} AND
-                        idome = ${3, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33} AND
-                        status = 'IMPEDIDO'`),
+                attributes: ['id', 'operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome', 'telefone', 'status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
+                where: {
+                    data_inicio: {
+                        [Op.and]: [
+                            Sequelize.literal(`DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}'`),
+                            Sequelize.literal(`YEAR(data_inicio) = ${nomeAno}`)
+                        ]
+                    },
+                    idome: {
+                        [Op.in]: [3, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+                    },
+                    status: {
+                        [Op.like]: 'IMPEDIDO%'
+                    }
+                }
             });
             
 
@@ -2427,12 +2455,21 @@ router.get('/', eAdmin, async (req, res) => {
 
             //TOTAL DE POLICIAIS IMPEDIDOS COM COTA NA OME | COUNT   
             const contagemImpedidos = await db.escalas.count({
-                attributes: ['id','operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome','telefone','status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
-                    where: Sequelize.literal(`
-                        DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}' AND
-                        YEAR(data_inicio) = ${nomeAno} AND
-                        idome = ${4, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49} AND
-                        status = 'IMPEDIDO'`),
+                attributes: ['id', 'operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome', 'telefone', 'status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
+                where: {
+                    data_inicio: {
+                        [Op.and]: [
+                            Sequelize.literal(`DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}'`),
+                            Sequelize.literal(`YEAR(data_inicio) = ${nomeAno}`)
+                        ]
+                    },
+                    idome: {
+                        [Op.in]: [4, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+                    },
+                    status: {
+                        [Op.like]: 'IMPEDIDO%'
+                    }
+                }
             });
             
 
@@ -3274,12 +3311,21 @@ router.get('/', eAdmin, async (req, res) => {
 
             //TOTAL DE POLICIAIS IMPEDIDOS COM COTA NA OME | COUNT   
             const contagemImpedidos = await db.escalas.count({
-                attributes: ['id','operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome','telefone','status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
-                    where: Sequelize.literal(`
-                        DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}' AND
-                        YEAR(data_inicio) = ${nomeAno} AND
-                        idome = ${5, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62} AND
-                        status = 'IMPEDIDO'`),
+                attributes: ['id', 'operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome', 'telefone', 'status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
+                where: {
+                    data_inicio: {
+                        [Op.and]: [
+                            Sequelize.literal(`DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}'`),
+                            Sequelize.literal(`YEAR(data_inicio) = ${nomeAno}`)
+                        ]
+                    },
+                    idome: {
+                        [Op.in]: [5, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62]
+                    },
+                    status: {
+                        [Op.like]: 'IMPEDIDO%'
+                    }
+                }
             });
             
 
@@ -4116,15 +4162,23 @@ router.get('/', eAdmin, async (req, res) => {
 
         //TOTAL DE POLICIAIS IMPEDIDOS COM COTA NA OME | COUNT   
         const contagemImpedidos = await db.escalas.count({
-            attributes: ['id','operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome','telefone','status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
-                where: Sequelize.literal(`
-                    DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}' AND
-                    YEAR(data_inicio) = ${nomeAno} AND
-                    idome = ${req.user.dataValues.omeId} AND
-                    status = 'IMPEDIDO'`),
+            attributes: ['id', 'operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome', 'telefone', 'status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
+            where: {
+                data_inicio: {
+                    [Op.and]: [
+                        Sequelize.literal(`DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}'`),
+                        Sequelize.literal(`YEAR(data_inicio) = ${nomeAno}`)
+                    ]
+                },
+                idome: {
+                    [Op.in]: [req.user.dataValues.omeId]
+                },
+                status: {
+                    [Op.like]: 'IMPEDIDO%'
+                }
+            }
         });
         
-
         // INICIO BLOCO QUE CONTA A QUANTIDADE REMANESCENTE DE OFICIAS E PRAÇAS
         const SequelizeRem = require('sequelize');
         const total_cotadistRen = await db.pjes.findAll({
@@ -4251,11 +4305,6 @@ router.get('/', eAdmin, async (req, res) => {
                 layout: 'main', profile: req.user.dataValues, sidebarSituations: true, danger_msg: 'Erro: Nenhum Evento Cadastrado!'
             });
         });
-
-
-
-
-        
 
     }
             
@@ -4406,7 +4455,6 @@ router.get('/escalas', eAdmin, async (req, res) => {
 
 });
 
-
 const moment = require('moment');
 moment.locale('pt-br');
 
@@ -4546,6 +4594,24 @@ router.post('/escalas/:id', eAdmin, async (req, res) => {
         });
     }
 
+
+    // Metodo para impedir que o policial seja lançado na mesma data
+    const dataInicioFormatada = dataInicioMoment.format('YYYY-MM-DD');
+    const matricula = dataFormulario.matricula;
+
+    // Consultar o banco de dados para verificar se a matrícula já existe com a mesma data
+    const matriculaComDataExistente = await db.escalas.findOne({
+        where: {
+            matricula: matricula,
+            data_inicio: dataInicioFormatada
+        }
+    });
+
+    if (matriculaComDataExistente) {
+        req.flash("danger_msg", "Policial Não Adiciondo. Já consta nesta data!");
+        return res.redirect('/unidade/unidadepjes/view/' + escalas.id);
+    }
+
     // Preparar os dados para salvar
     const dataSalvar = {
         ...dataFormulario,
@@ -4612,27 +4678,87 @@ router.get('/deleteEscala/:id', eAdmin, async (req, res) => {
 });
 
 //SQL para buscar os dados do PM na tabela SGPM e retornar para o AJAX
-let dadosSgpms = {};
+const { Op } = require('sequelize'); 
 router.get('/buscarSgpm/:matricula', async (req, res) => {
     const matricula = req.params.matricula;
+    const nomeMes = req.session.mes;
+    const nomeAno = req.session.ano;
 
     try {
+        // Obtendo dados do sgpm
         const dadoSgpm = await db.sgpms.findOne({
-            where: { matricula: matricula },
-            attributes: ['id', 'pg', 'nome', 'ome', 'status', 'nunfunc','localap', 'createdAt', 'updatedAt']
+            where: {
+                matricula: matricula,
+                mes: nomeMes,
+                ano: nomeAno
+            },
+            attributes: ['id', 'pg', 'nome', 'ome', 'status', 'nunfunc', 'nunvinc', 'localap', 'createdAt', 'updatedAt']
         });
+
+        function converterMesPTparaEN(nomeMesPT) {
+            switch (nomeMesPT) {
+                case 'JAN': return 'JAN';
+                case 'FEV': return 'FEB';
+                case 'MAR': return 'MAR';
+                case 'ABR': return 'APR';
+                case 'MAI': return 'MAY';
+                case 'JUN': return 'JUN';
+                case 'JUL': return 'JUL';
+                case 'AGO': return 'AUG';
+                case 'SET': return 'SEP';
+                case 'OUT': return 'OCT';
+                case 'NOV': return 'NOV';
+                case 'DEZ': return 'DEC';
+                default: return nomeMesPT;
+            }
+        }
+
+        const nomeMesConvertido = converterMesPTparaEN(nomeMes);
+
+        // Obtendo os serviços detalhados
+        const ttservico = await db.escalas.findAll({
+            attributes: [
+                'matricula',
+                'idome',
+                [Sequelize.fn('DATE_FORMAT', Sequelize.col('data_inicio'), '%d'), 'dia'],
+                [Sequelize.fn('SUM', Sequelize.col('ttcota')), 'total_servicos']
+            ],
+            where: {
+                data_inicio: {
+                    [Op.and]: [
+                        Sequelize.literal(`DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}'`),
+                        Sequelize.literal(`YEAR(data_inicio) = ${nomeAno}`)
+                    ]
+                },
+                matricula: matricula
+            },
+            include: [
+                { model: db.omes, attributes: ['nome'] },
+            ],
+            group: ['matricula', 'idome', 'dia'],
+            raw: true // Adicionando raw: true para obter o resultado como um objeto simples
+        });
+
+        // Processar o resultado para incluir o nome do OME e outras informações
+        const servicosDetalhados = ttservico.map(item => ({
+            dia: item.dia,
+            nome: item['ome.nome'], // Usar a notação de colchetes para acessar o atributo aninhado
+            total_servicos: item.total_servicos
+        }));
 
         if (dadoSgpm) {
             // Preenche o objeto dadosSgpms com os dados encontrados no banco de dados
-            dadosSgpms[matricula] = {
+            const dadosSgpms = {
                 pg: dadoSgpm.pg,
                 nome: dadoSgpm.nome,
                 ome: dadoSgpm.ome,
                 status: dadoSgpm.status,
                 nunfunc: dadoSgpm.nunfunc,
-                localap: dadoSgpm.localap    
+                nunvinc: dadoSgpm.nunvinc,
+                localap: dadoSgpm.localap,
+                servicosDetalhados: servicosDetalhados // Adiciona o array de serviços detalhados ao objeto
             };
-            res.json(dadoSgpm); // Retorna o dadoSgpm encontrado como JSON (opcional)
+            res.json(dadosSgpms); // Retorna o objeto dadosSgpms como JSON
         } else {
             res.status(404).send('dadoSgpm não encontrado');
         }
@@ -4641,6 +4767,7 @@ router.get('/buscarSgpm/:matricula', async (req, res) => {
         res.status(500).send('Erro interno ao buscar dadoSgpm');
     }
 });
+
 
 
 router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {    
@@ -4684,7 +4811,7 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
 
         const nomeMesConvertido = converterMesPTparaEN(nomeMes);
         const escalas = await db.escalas.findAll({
-            attributes: ['id','operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome','telefone','status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
+            attributes: ['id','operacao', 'cod', 'nunfunc', 'nunvinc', 'pg', 'matricula', 'nome','telefone','status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'ttcota', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
             where: Sequelize.literal(`DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}' AND YEAR(data_inicio) = ${nomeAno} AND idome = ${idOmePrestCont}`),
         });
     
@@ -4699,10 +4826,10 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         let countD3 = 0;
         escalas.forEach(escala => {
             if ((escala.pg === 'CEL' || escala.pg === 'TC'|| escala.pg === 'MAJ'|| escala.pg === 'CAP'|| escala.pg === '1º TEN'|| escala.pg === '2º TEN'|| escala.pg === 'ASP') && escala.cod === 247) {
-                countD2++;
+                countD2+= escala.ttcota;
             }
             if ((escala.pg === 'SUBTEN' || escala.pg === '1º SGT' || escala.pg === '2º SGT'|| escala.pg === '3º SGT'|| escala.pg === 'CB'|| escala.pg === 'SD') && escala.cod === 247) {
-                countD3++;
+                countD3+= escala.ttcota;
             }
         });
 
@@ -4711,10 +4838,10 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         let countG3 = 0;
         escalas.forEach(escala => {
             if ((escala.pg === 'CEL' || escala.pg === 'TC'|| escala.pg === 'MAJ'|| escala.pg === 'CAP'|| escala.pg === '1º TEN'|| escala.pg === '2º TEN'|| escala.pg === 'ASP') && escala.cod === 255) {
-                countG2++;
+                countG2+= escala.ttcota;
             }
             if ((escala.pg === 'SUBTEN' || escala.pg === '1º SGT' || escala.pg === '2º SGT'|| escala.pg === '3º SGT'|| escala.pg === 'CB'|| escala.pg === 'SD') && escala.cod === 255) {
-                countG3++;
+                countG3+= escala.ttcota;
             }
         });
 
@@ -4724,10 +4851,10 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         let countJ3 = 0;
         escalas.forEach(escala => {
             if ((escala.pg === 'CEL' || escala.pg === 'TC'|| escala.pg === 'MAJ'|| escala.pg === 'CAP'|| escala.pg === '1º TEN'|| escala.pg === '2º TEN'|| escala.pg === 'ASP') && escala.cod === 250) {
-                countJ2++;
+                countJ2+= escala.ttcota;
             }
             if ((escala.pg === 'SUBTEN' || escala.pg === '1º SGT' || escala.pg === '2º SGT'|| escala.pg === '3º SGT'|| escala.pg === 'CB'|| escala.pg === 'SD') && escala.cod === 250) {
-                countJ3++;
+                countJ3+= escala.ttcota;
             }
         });
 
@@ -4737,16 +4864,16 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         let countM3 = 0;
         escalas.forEach(escala => {
             if ((escala.pg === 'CEL' || escala.pg === 'TC'|| escala.pg === 'MAJ'|| escala.pg === 'CAP'|| escala.pg === '1º TEN'|| escala.pg === '2º TEN'|| escala.pg === 'ASP') && escala.cod === 263) {
-                countM2++;
+                countM2+= escala.ttcota;
             }
             if ((escala.pg === 'SUBTEN' || escala.pg === '1º SGT' || escala.pg === '2º SGT'|| escala.pg === '3º SGT'|| escala.pg === 'CB'|| escala.pg === 'SD') && escala.cod === 263) {
-                countM3++;
+                countM3+= escala.ttcota;
             }
         });
 
         
         const workbook = new Excel.Workbook();
-        const worksheet = workbook.addWorksheet('PJES_'+`${req.user.ome.dataValues.nome} - ${nomeMes}_${nomeAno}`);
+        const worksheet = workbook.addWorksheet('PJES_'+`${req.user.PcontasOme.dataValues.nome} - ${nomeMes}_${nomeAno}`);
 
         const fs = require('fs');
         const path = require('path');
@@ -4770,7 +4897,7 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         // Adicionando o nome no topo
         worksheet.mergeCells('A5:K5'); // Mescla as células de A1 até K1
         const headerCell = worksheet.getCell('A5');
-        headerCell.value = 'PRESTAÇÃO DE CONTAS - PJES |'+`${req.user.ome.dataValues.nome} - ${nomeMes}_${nomeAno} | ${req.user.dataValues.name} - ${req.user.dataValues.telefone}`; // Substitua com o nome desejado
+        headerCell.value = 'PRESTAÇÃO DE CONTAS - PJES |'+`${req.user.PcontasOme.dataValues.nome} - ${nomeMes}_${nomeAno} | ${req.user.dataValues.name} - ${req.user.dataValues.telefone}`; // Substitua com o nome desejado
         headerCell.font = { size: 12, bold: true };
         headerCell.alignment = { horizontal: 'center' };
         headerCell.fill = {
@@ -4812,10 +4939,10 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
                 escala.matricula,
                 escala.operacao,
                 escala.nunfunc,
-                1,
+                escala.nunvinc,
                 escala.data_inicio,
                 escala.data_inicio, // Por padrão, estou assumindo que data_inicio e data_fim são formatados corretamente
-                1,
+                escala.ttcota,
                 escala.cod,
                 ' ',
                 escala.pg,
@@ -4840,7 +4967,7 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         worksheet.getCell('G3').value = countG3;
 
 
-        worksheet.getCell('I1:J1').value = 'PJES GOVERNO OP ENEM';
+        worksheet.getCell('I1:J1').value = 'PJES GOVERNO FEDERAL';
         worksheet.getCell('I2').value = 'Oficiais';
         worksheet.getCell('I3').value = 'Praças';
 

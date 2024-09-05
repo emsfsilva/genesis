@@ -10,31 +10,43 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       pg: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       matricula: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       nome: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(100),
         collate: 'utf8mb4_general_ci'
       },
       ome: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       status: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       nunfunc: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
+        collate: 'utf8mb4_general_ci'
+      },
+      nunvinc: {
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       localap: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
+        collate: 'utf8mb4_general_ci'
+      },
+      mes: {
+        type: Sequelize.STRING(11),
+        collate: 'utf8mb4_general_ci'
+      },
+      ano: {
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       createdAt: {

@@ -2,7 +2,9 @@
 'use strict';
 
 // Seeders para cadastrar registro na tabela "situations"
-/** @type {import('sequelize-cli').Migration} */
+
+//** @type {import('sequelize-cli').Migration} */
+/*
 module.exports = {
   async up (queryInterface) {
     // Cadastrar o registro na tabela "omes"
@@ -47,3 +49,4 @@ module.exports = {
     
   }
 };
+*/

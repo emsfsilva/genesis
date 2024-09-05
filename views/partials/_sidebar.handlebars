@@ -32,7 +32,8 @@
       </div>
       <div class="col-md-8 col-sm-8 col-xs-8 profile_pic profile_info" style="padding: 1px 10px 10px;">
         <span>Bem-vindo,</span>
-        <h2>{{profile.name}}, Adm</h2>
+        <h2>{{profile.name}},</h2>
+        <h2>{{profile.situation.dataValues.nameSituation}},</h2>
         <h2>{{profile.ome.dataValues.nome}}</h2>
       </div>
     </div>
@@ -71,7 +72,6 @@
         <ul class="nav side-menu">
           <li><a><i class="fa fa-sitemap"></i> Pjes <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a>2023<span class="fa fa-chevron-down"></span></a></li>
               <li><a>2024<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   {{#if profile.omeId}}
@@ -110,11 +110,239 @@
                   {{/if}}
                 </ul>
               </li>
+              <li><a>2025<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/pjes?mes=JAN&ano=2025">Jan_24</a></li>
+                      <li><a href="/pjes?mes=FEV&ano=2025">Fev_25</a></li>
+                      <li><a href="/pjes?mes=MAR&ano=2025">Mar_25</a></li>
+                      <li><a href="/pjes?mes=ABR&ano=2025">Abr_25</a></li>
+                      <li><a href="/pjes?mes=MAI&ano=2025">Mai_25</a></li>
+                      <li><a href="/pjes?mes=JUN&ano=2025">Jun_25</a></li>
+                      <li><a href="/pjes?mes=JUL&ano=2025">Jul_25</a></li>
+                      <li><a href="/pjes?mes=AGO&ano=2025">Ago_25</a></li>
+                      <li><a href="/pjes?mes=SET&ano=2025">Set_25</a></li>
+                      <li><a href="/pjes?mes=OUT&ano=2025">Out_25</a></li>
+                      <li><a href="/pjes?mes=NOV&ano=2025">Nov_25</a></li>
+                      <li><a href="/pjes?mes=DEZ&ano=2025">Dez_25</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadepjes?mes=JAN&ano=2025">Jan_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=FEV&ano=2025">Fev_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAR&ano=2025">Mar_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=ABR&ano=2025">Abr_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAI&ano=2025">Mai_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUN&ano=2025">Jun_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUL&ano=2025">Jul_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=AGO&ano=2025">Ago_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=SET&ano=2025">Set_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=OUT&ano=2025">Out_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=NOV&ano=2025">Nov_25</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=DEZ&ano=2025">Dez_25</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2026<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/pjes?mes=JAN&ano=2026">Jan_26</a></li>
+                      <li><a href="/pjes?mes=FEV&ano=2026">Fev_26</a></li>
+                      <li><a href="/pjes?mes=MAR&ano=2026">Mar_26</a></li>
+                      <li><a href="/pjes?mes=ABR&ano=2026">Abr_26</a></li>
+                      <li><a href="/pjes?mes=MAI&ano=2026">Mai_26</a></li>
+                      <li><a href="/pjes?mes=JUN&ano=2026">Jun_26</a></li>
+                      <li><a href="/pjes?mes=JUL&ano=2026">Jul_26</a></li>
+                      <li><a href="/pjes?mes=AGO&ano=2026">Ago_26</a></li>
+                      <li><a href="/pjes?mes=SET&ano=2026">Set_26</a></li>
+                      <li><a href="/pjes?mes=OUT&ano=2026">Out_26</a></li>
+                      <li><a href="/pjes?mes=NOV&ano=2026">Nov_26</a></li>
+                      <li><a href="/pjes?mes=DEZ&ano=2026">Dez_26</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadepjes?mes=JAN&ano=2026">Jan_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=FEV&ano=2026">Fev_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAR&ano=2026">Mar_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=ABR&ano=2026">Abr_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAI&ano=2026">Mai_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUN&ano=2026">Jun_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUL&ano=2026">Jul_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=AGO&ano=2026">Ago_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=SET&ano=2026">Set_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=OUT&ano=2026">Out_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=NOV&ano=2026">Nov_26</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=DEZ&ano=2026">Dez_26</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2027<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/pjes?mes=JAN&ano=2027">Jan_27</a></li>
+                      <li><a href="/pjes?mes=FEV&ano=2027">Fev_27</a></li>
+                      <li><a href="/pjes?mes=MAR&ano=2027">Mar_27</a></li>
+                      <li><a href="/pjes?mes=ABR&ano=2027">Abr_27</a></li>
+                      <li><a href="/pjes?mes=MAI&ano=2027">Mai_27</a></li>
+                      <li><a href="/pjes?mes=JUN&ano=2027">Jun_27</a></li>
+                      <li><a href="/pjes?mes=JUL&ano=2027">Jul_27</a></li>
+                      <li><a href="/pjes?mes=AGO&ano=2027">Ago_27</a></li>
+                      <li><a href="/pjes?mes=SET&ano=2027">Set_27</a></li>
+                      <li><a href="/pjes?mes=OUT&ano=2027">Out_27</a></li>
+                      <li><a href="/pjes?mes=NOV&ano=2027">Nov_27</a></li>
+                      <li><a href="/pjes?mes=DEZ&ano=2027">Dez_27</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadepjes?mes=JAN&ano=2027">Jan_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=FEV&ano=2027">Fev_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAR&ano=2027">Mar_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=ABR&ano=2027">Abr_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAI&ano=2027">Mai_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUN&ano=2027">Jun_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUL&ano=2027">Jul_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=AGO&ano=2027">Ago_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=SET&ano=2027">Set_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=OUT&ano=2027">Out_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=NOV&ano=2027">Nov_27</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=DEZ&ano=2027">Dez_27</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2028<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/pjes?mes=JAN&ano=2028">Jan_28</a></li>
+                      <li><a href="/pjes?mes=FEV&ano=2028">Fev_28</a></li>
+                      <li><a href="/pjes?mes=MAR&ano=2028">Mar_28</a></li>
+                      <li><a href="/pjes?mes=ABR&ano=2028">Abr_28</a></li>
+                      <li><a href="/pjes?mes=MAI&ano=2028">Mai_28</a></li>
+                      <li><a href="/pjes?mes=JUN&ano=2028">Jun_28</a></li>
+                      <li><a href="/pjes?mes=JUL&ano=2028">Jul_28</a></li>
+                      <li><a href="/pjes?mes=AGO&ano=2028">Ago_28</a></li>
+                      <li><a href="/pjes?mes=SET&ano=2028">Set_28</a></li>
+                      <li><a href="/pjes?mes=OUT&ano=2028">Out_28</a></li>
+                      <li><a href="/pjes?mes=NOV&ano=2028">Nov_28</a></li>
+                      <li><a href="/pjes?mes=DEZ&ano=2028">Dez_28</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadepjes?mes=JAN&ano=2028">Jan_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=FEV&ano=2028">Fev_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAR&ano=2028">Mar_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=ABR&ano=2028">Abr_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAI&ano=2028">Mai_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUN&ano=2028">Jun_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUL&ano=2028">Jul_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=AGO&ano=2028">Ago_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=SET&ano=2028">Set_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=OUT&ano=2028">Out_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=NOV&ano=2028">Nov_28</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=DEZ&ano=2028">Dez_28</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2029<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/pjes?mes=JAN&ano=2029">Jan_29</a></li>
+                      <li><a href="/pjes?mes=FEV&ano=2029">Fev_29</a></li>
+                      <li><a href="/pjes?mes=MAR&ano=2029">Mar_29</a></li>
+                      <li><a href="/pjes?mes=ABR&ano=2029">Abr_29</a></li>
+                      <li><a href="/pjes?mes=MAI&ano=2029">Mai_29</a></li>
+                      <li><a href="/pjes?mes=JUN&ano=2029">Jun_29</a></li>
+                      <li><a href="/pjes?mes=JUL&ano=2029">Jul_29</a></li>
+                      <li><a href="/pjes?mes=AGO&ano=2029">Ago_29</a></li>
+                      <li><a href="/pjes?mes=SET&ano=2029">Set_29</a></li>
+                      <li><a href="/pjes?mes=OUT&ano=2029">Out_29</a></li>
+                      <li><a href="/pjes?mes=NOV&ano=2029">Nov_29</a></li>
+                      <li><a href="/pjes?mes=DEZ&ano=2029">Dez_29</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadepjes?mes=JAN&ano=2029">Jan_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=FEV&ano=2029">Fev_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAR&ano=2029">Mar_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=ABR&ano=2029">Abr_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAI&ano=2029">Mai_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUN&ano=2029">Jun_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUL&ano=2029">Jul_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=AGO&ano=2029">Ago_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=SET&ano=2029">Set_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=OUT&ano=2029">Out_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=NOV&ano=2029">Nov_29</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=DEZ&ano=2029">Dez_29</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2030<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/pjes?mes=JAN&ano=2030">Jan_30</a></li>
+                      <li><a href="/pjes?mes=FEV&ano=2030">Fev_30</a></li>
+                      <li><a href="/pjes?mes=MAR&ano=2030">Mar_30</a></li>
+                      <li><a href="/pjes?mes=ABR&ano=2030">Abr_30</a></li>
+                      <li><a href="/pjes?mes=MAI&ano=2030">Mai_30</a></li>
+                      <li><a href="/pjes?mes=JUN&ano=2030">Jun_30</a></li>
+                      <li><a href="/pjes?mes=JUL&ano=2030">Jul_30</a></li>
+                      <li><a href="/pjes?mes=AGO&ano=2030">Ago_30</a></li>
+                      <li><a href="/pjes?mes=SET&ano=2030">Set_30</a></li>
+                      <li><a href="/pjes?mes=OUT&ano=2030">Out_30</a></li>
+                      <li><a href="/pjes?mes=NOV&ano=2030">Nov_30</a></li>
+                      <li><a href="/pjes?mes=DEZ&ano=2030">Dez_30</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadepjes?mes=JAN&ano=2030">Jan_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=FEV&ano=2030">Fev_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAR&ano=2030">Mar_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=ABR&ano=2030">Abr_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=MAI&ano=2030">Mai_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUN&ano=2030">Jun_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=JUL&ano=2030">Jul_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=AGO&ano=2030">Ago_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=SET&ano=2030">Set_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=OUT&ano=2030">Out_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=NOV&ano=2030">Nov_30</a></li>
+                      <li><a href="/unidade/unidadepjes?mes=DEZ&ano=2030">Dez_30</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
             </ul>
           </li>
           <li><a><i class="fa fa-line-chart"></i> Diarias <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a>2023<span class="fa fa-chevron-down"></span></a></li>
+              
               <li><a>2024<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   {{#if profile.omeId}}
@@ -146,6 +374,234 @@
                       <li><a href="/unidade/unidadediarias?mes=OUT&ano=2024">Out_24</a></li>
                       <li><a href="/unidade/unidadediarias?mes=NOV&ano=2024">Nov_24</a></li>
                       <li><a href="/unidade/unidadediarias?mes=DEZ&ano=2024">Dez_24</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2025<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/diarias?mes=JAN&ano=2025">Jan_25</a></li>
+                      <li><a href="/diarias?mes=FEV&ano=2025">Fev_25</a></li>
+                      <li><a href="/diarias?mes=MAR&ano=2025">Mar_25</a></li>
+                      <li><a href="/diarias?mes=ABR&ano=2025">Abr_25</a></li>
+                      <li><a href="/diarias?mes=MAI&ano=2025">Mai_25</a></li>
+                      <li><a href="/diarias?mes=JUN&ano=2025">Jun_25</a></li>
+                      <li><a href="/diarias?mes=JUL&ano=2025">Jul_25</a></li>
+                      <li><a href="/diarias?mes=AGO&ano=2025">Ago_25</a></li>
+                      <li><a href="/diarias?mes=SET&ano=2025">Set_25</a></li>
+                      <li><a href="/diarias?mes=OUT&ano=2025">Out_25</a></li>
+                      <li><a href="/diarias?mes=NOV&ano=2025">Nov_25</a></li>
+                      <li><a href="/diarias?mes=DEZ&ano=2025">Dez_25</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadediarias?mes=JAN&ano=2025">Jan_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=FEV&ano=2025">Fev_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAR&ano=2025">Mar_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=ABR&ano=2025">Abr_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAI&ano=2025">Mai_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUN&ano=2025">Jun_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUL&ano=2025">Jul_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=AGO&ano=2025">Ago_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=SET&ano=2025">Set_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=OUT&ano=2025">Out_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=NOV&ano=2025">Nov_25</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=DEZ&ano=2025">Dez_25</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2026<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/diarias?mes=JAN&ano=2026">Jan_26</a></li>
+                      <li><a href="/diarias?mes=FEV&ano=2026">Fev_26</a></li>
+                      <li><a href="/diarias?mes=MAR&ano=2026">Mar_26</a></li>
+                      <li><a href="/diarias?mes=ABR&ano=2026">Abr_26</a></li>
+                      <li><a href="/diarias?mes=MAI&ano=2026">Mai_26</a></li>
+                      <li><a href="/diarias?mes=JUN&ano=2026">Jun_26</a></li>
+                      <li><a href="/diarias?mes=JUL&ano=2026">Jul_26</a></li>
+                      <li><a href="/diarias?mes=AGO&ano=2026">Ago_26</a></li>
+                      <li><a href="/diarias?mes=SET&ano=2026">Set_26</a></li>
+                      <li><a href="/diarias?mes=OUT&ano=2026">Out_26</a></li>
+                      <li><a href="/diarias?mes=NOV&ano=2026">Nov_26</a></li>
+                      <li><a href="/diarias?mes=DEZ&ano=2026">Dez_26</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadediarias?mes=JAN&ano=2026">Jan_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=FEV&ano=2026">Fev_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAR&ano=2026">Mar_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=ABR&ano=2026">Abr_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAI&ano=2026">Mai_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUN&ano=2026">Jun_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUL&ano=2026">Jul_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=AGO&ano=2026">Ago_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=SET&ano=2026">Set_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=OUT&ano=2026">Out_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=NOV&ano=2026">Nov_26</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=DEZ&ano=2026">Dez_26</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2027<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/diarias?mes=JAN&ano=2027">Jan_27</a></li>
+                      <li><a href="/diarias?mes=FEV&ano=2027">Fev_27</a></li>
+                      <li><a href="/diarias?mes=MAR&ano=2027">Mar_27</a></li>
+                      <li><a href="/diarias?mes=ABR&ano=2027">Abr_27</a></li>
+                      <li><a href="/diarias?mes=MAI&ano=2027">Mai_27</a></li>
+                      <li><a href="/diarias?mes=JUN&ano=2027">Jun_27</a></li>
+                      <li><a href="/diarias?mes=JUL&ano=2027">Jul_27</a></li>
+                      <li><a href="/diarias?mes=AGO&ano=2027">Ago_27</a></li>
+                      <li><a href="/diarias?mes=SET&ano=2027">Set_27</a></li>
+                      <li><a href="/diarias?mes=OUT&ano=2027">Out_27</a></li>
+                      <li><a href="/diarias?mes=NOV&ano=2027">Nov_27</a></li>
+                      <li><a href="/diarias?mes=DEZ&ano=2027">Dez_27</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadediarias?mes=JAN&ano=2027">Jan_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=FEV&ano=2027">Fev_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAR&ano=2027">Mar_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=ABR&ano=2027">Abr_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAI&ano=2027">Mai_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUN&ano=2027">Jun_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUL&ano=2027">Jul_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=AGO&ano=2027">Ago_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=SET&ano=2027">Set_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=OUT&ano=2027">Out_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=NOV&ano=2027">Nov_27</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=DEZ&ano=2027">Dez_27</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2028<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/diarias?mes=JAN&ano=2028">Jan_28</a></li>
+                      <li><a href="/diarias?mes=FEV&ano=2028">Fev_28</a></li>
+                      <li><a href="/diarias?mes=MAR&ano=2028">Mar_28</a></li>
+                      <li><a href="/diarias?mes=ABR&ano=2028">Abr_28</a></li>
+                      <li><a href="/diarias?mes=MAI&ano=2028">Mai_28</a></li>
+                      <li><a href="/diarias?mes=JUN&ano=2028">Jun_28</a></li>
+                      <li><a href="/diarias?mes=JUL&ano=2028">Jul_28</a></li>
+                      <li><a href="/diarias?mes=AGO&ano=2028">Ago_28</a></li>
+                      <li><a href="/diarias?mes=SET&ano=2028">Set_28</a></li>
+                      <li><a href="/diarias?mes=OUT&ano=2028">Out_28</a></li>
+                      <li><a href="/diarias?mes=NOV&ano=2028">Nov_28</a></li>
+                      <li><a href="/diarias?mes=DEZ&ano=2028">Dez_28</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadediarias?mes=JAN&ano=2028">Jan_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=FEV&ano=2028">Fev_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAR&ano=2028">Mar_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=ABR&ano=2028">Abr_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAI&ano=2028">Mai_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUN&ano=2028">Jun_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUL&ano=2028">Jul_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=AGO&ano=2028">Ago_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=SET&ano=2028">Set_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=OUT&ano=2028">Out_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=NOV&ano=2028">Nov_28</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=DEZ&ano=2028">Dez_28</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2029<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/diarias?mes=JAN&ano=2029">Jan_29</a></li>
+                      <li><a href="/diarias?mes=FEV&ano=2029">Fev_29</a></li>
+                      <li><a href="/diarias?mes=MAR&ano=2029">Mar_29</a></li>
+                      <li><a href="/diarias?mes=ABR&ano=2029">Abr_29</a></li>
+                      <li><a href="/diarias?mes=MAI&ano=2029">Mai_29</a></li>
+                      <li><a href="/diarias?mes=JUN&ano=2029">Jun_29</a></li>
+                      <li><a href="/diarias?mes=JUL&ano=2029">Jul_29</a></li>
+                      <li><a href="/diarias?mes=AGO&ano=2029">Ago_29</a></li>
+                      <li><a href="/diarias?mes=SET&ano=2029">Set_29</a></li>
+                      <li><a href="/diarias?mes=OUT&ano=2029">Out_29</a></li>
+                      <li><a href="/diarias?mes=NOV&ano=2029">Nov_29</a></li>
+                      <li><a href="/diarias?mes=DEZ&ano=2029">Dez_29</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadediarias?mes=JAN&ano=2029">Jan_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=FEV&ano=2029">Fev_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAR&ano=2029">Mar_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=ABR&ano=2029">Abr_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAI&ano=2029">Mai_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUN&ano=2029">Jun_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUL&ano=2029">Jul_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=AGO&ano=2029">Ago_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=SET&ano=2029">Set_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=OUT&ano=2029">Out_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=NOV&ano=2029">Nov_29</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=DEZ&ano=2029">Dez_29</a></li>
+                      <!--ACESSO DAS UNIDADES -->
+                    {{else}}
+                    <!-- Caso profile.omeId não esteja definido ou seja falso -->
+                    <!-- Inserir comportamento padrão aqui, se necessário -->
+                  {{/if}}
+                </ul>
+              </li>
+              <li><a>2030<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  {{#if profile.omeId}}
+                    {{#if (eq profile.omeId 1)}}
+                      <li class="sub_menu"><a href="/diarias?mes=JAN&ano=2029">Jan_30</a></li>
+                      <li><a href="/diarias?mes=FEV&ano=2030">Fev_30</a></li>
+                      <li><a href="/diarias?mes=MAR&ano=2030">Mar_30</a></li>
+                      <li><a href="/diarias?mes=ABR&ano=2030">Abr_30</a></li>
+                      <li><a href="/diarias?mes=MAI&ano=2030">Mai_30</a></li>
+                      <li><a href="/diarias?mes=JUN&ano=2030">Jun_30</a></li>
+                      <li><a href="/diarias?mes=JUL&ano=2030">Jul_30</a></li>
+                      <li><a href="/diarias?mes=AGO&ano=2030">Ago_30</a></li>
+                      <li><a href="/diarias?mes=SET&ano=2030">Set_30</a></li>
+                      <li><a href="/diarias?mes=OUT&ano=2030">Out_30</a></li>
+                      <li><a href="/diarias?mes=NOV&ano=2030">Nov_30</a></li>
+                      <li><a href="/diarias?mes=DEZ&ano=2030">Dez_30</a></li>
+                    {{/if}}
+
+                      <!--ACESSO DAS UNIDADES -->
+                      <li class="sub_menu"><a href="/unidade/unidadediarias?mes=JAN&ano=2030">Jan_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=FEV&ano=2030">Fev_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAR&ano=2030">Mar_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=ABR&ano=2030">Abr_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=MAI&ano=2030">Mai_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUN&ano=2030">Jun_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=JUL&ano=2030">Jul_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=AGO&ano=2030">Ago_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=SET&ano=2030">Set_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=OUT&ano=2030">Out_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=NOV&ano=2030">Nov_30</a></li>
+                      <li><a href="/unidade/unidadediarias?mes=DEZ&ano=2030">Dez_30</a></li>
                       <!--ACESSO DAS UNIDADES -->
                     {{else}}
                     <!-- Caso profile.omeId não esteja definido ou seja falso -->

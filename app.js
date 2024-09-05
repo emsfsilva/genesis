@@ -91,6 +91,43 @@ app.engine('handlebars', engine({
         lte: function(a, b, options) {
             return a <= b ? options.fn(this) : options.inverse(this);
         },
+
+        groupBy:function (array, field) {
+                const groups = array.reduce((result, item) => {
+                    const key = item[field];
+                    if (!result[key]) {
+                        result[key] = [];
+                    }
+                    result[key].push(item);
+                    return result;
+                }, {});
+                
+                return Object.values(groups);
+        },
+
+        uniqueYear: function(dados) {
+            if (!dados) return [];
+            const years = [...new Set(dados.map(item => item.ano))];
+            return years;
+          },
+
+        filterByYear: function(dados, ano) {
+            if (!dados) return [];
+            return dados.filter(item => item.ano === ano);
+          },
+
+        json: function(context) {
+            return JSON.stringify(context, null, 2);
+          },
+
+
+        showIconIfTrue: function(value, options) {
+            if (value < 100) {
+                return new Handlebars.SafeString('<i class="fa fa-check-square-o"></i>');
+            } else {
+                return new Handlebars.SafeString('<i class="fa fa-square-o"></i>');
+            }
+          },
     }
 }));
 // Incluir as CONTROLLERS
@@ -114,10 +151,6 @@ const unidadepjes = require('./controllers/unidadepjes');
 const unidadeprofile = require('./controllers/unidadeprofile');
 const unidadeconsultarEscalas = require('./controllers/unidadeconsultarEscalas');
 const unidadediarias = require('./controllers/unidadediarias');
-
-
-
-
 
 // Indicar a rota de acesso
 //app.use('/', home);
@@ -201,6 +234,22 @@ const Handlebars = require('handlebars');
 Handlebars.registerHelper('eq', function (a, b) {
     return a === b;
 });
+
+Handlebars.registerHelper('and', function (a, b) {
+    return a && b;
+});
+
+Handlebars.registerHelper('ifEquals', function(a, b, options) {
+    if (a === b) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  });
+
+
+
+
 
 // Iniciar o servidor na porta 8080
 app.listen(8080, () => {

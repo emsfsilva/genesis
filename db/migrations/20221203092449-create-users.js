@@ -10,11 +10,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         collate: 'utf8mb4_general_ci'
       },
       email: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         collate: 'utf8mb4_general_ci'
       },
       password: {
@@ -26,15 +26,15 @@ module.exports = {
         collate: 'utf8mb4_general_ci'
       },
       loginsei: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         collate: 'utf8mb4_general_ci'
       },
       matricula: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       telefone: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(20),
         collate: 'utf8mb4_general_ci'
       },
       createdAt: {

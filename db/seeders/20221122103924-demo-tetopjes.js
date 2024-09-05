@@ -11,73 +11,509 @@ module.exports = {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 1,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 2,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 3,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 4,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 5,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 6,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 7,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 8,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 9,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 10,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 11,
-        ano: 2024
+        ano: '2024'
       },
       {
         ctgeralinicialof: 2510,
         ctgeralinicialprc: 19348,
         mes: 12,
-        ano: 2024
+        ano: '2024'
+      },
+
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 1,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 2,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 3,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 4,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 5,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 6,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 7,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 8,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 9,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 10,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 11,
+        ano: '2025'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 12,
+        ano: '2025'
+      },
+
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 1,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 2,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 3,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 4,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 5,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 6,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 7,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 8,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 9,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 10,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 11,
+        ano: '2026'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 12,
+        ano: '2026'
+      },
+
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 1,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 2,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 3,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 4,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 5,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 6,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 7,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 8,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 9,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 10,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 11,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 12,
+        ano: '2027'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 1,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 2,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 3,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 4,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 5,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 6,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 7,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 8,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 9,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 10,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 11,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 12,
+        ano: '2028'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 1,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 2,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 3,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 4,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 5,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 6,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 7,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 8,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 9,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 10,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 11,
+        ano: '2029'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 12,
+        ano: '2029'
+      },
+
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 1,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 2,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 3,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 4,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 5,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 6,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 7,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 8,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 9,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 10,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 11,
+        ano: '2030'
+      },
+      {
+        ctgeralinicialof: 2510,
+        ctgeralinicialprc: 19348,
+        mes: 12,
+        ano: '2030'
       },
             
   ]);

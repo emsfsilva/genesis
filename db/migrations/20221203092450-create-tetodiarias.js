@@ -13,10 +13,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       mes: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING(11),
+        collate: 'utf8mb4_general_ci'
       },
       ano: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING(11),
+        collate: 'utf8mb4_general_ci'
       }
       
     });

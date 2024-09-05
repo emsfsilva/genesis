@@ -113,9 +113,9 @@ module.exports = function (passport) {
                     return done(null, false, { message: "Erro: E-mail ou senha incorreta!" });
                 }
 
-                if (user.situationId !== 1) {
-                    return done(null, false, { message: "Erro: Necessário confirmar o e-mail, solicite novo link <a href='/conf-email'>clique aqui</a>!" });
-                }
+          //      if (user.situationId !== 1) {
+            //        return done(null, false, { message: "Erro: Necessário confirmar o e-mail, solicite novo link <a href='/conf-email'>clique aqui</a>!" });
+              //  }
 
                 return done(null, user);
             });

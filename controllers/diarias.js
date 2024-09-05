@@ -11,25 +11,12 @@ const db = require('../db/models');
 const yup = require('yup');
 
 const Sequelize = require('sequelize');
-const Excel = require('exceljs');
 
 router.get('/', eAdmin, async (req, res) => {
     const nomeMes = req.session.mes;
     const mes = req.session.mes;
     const nomeAno = req.session.ano;
     const ano = req.session.ano;
-    const { Op } = require('sequelize');
-    const { page = 1 } = req.query;
-    const limit = 40;
-    var lastPage = 1;
-
-    const countdiarias = await db.diarias.count();
-    
-    if (countdiarias === 0) {
-        return res.render("admin/diarias/list", { layout: 'main', profile: req.user.dataValues, sidebarSituations: true, danger_msg: 'Erro: Nenhum diarias encontrada!' });
-    }
-
-
 
 //---DPO | INICIO
 
@@ -558,8 +545,6 @@ router.get('/', eAdmin, async (req, res) => {
         }
     }
 
-
-
     // INICIO -  CONSULTA PARA TRAZER O TETO DA TABELA tetodiarias
     const nomeMesConvertido = converterMesNunparaAbrev(mesAtual);
     const ttgeralinicialmes = await db.tetodiarias.findOne({
@@ -603,7 +588,7 @@ router.get('/', eAdmin, async (req, res) => {
                 'idome', 'ano',
                 ],
                 where: {
-                idome: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                idome: [1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                         21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                         41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                         61,62,65,66,67,68,69,70,71,72,73,74,75,76],
@@ -623,7 +608,7 @@ router.get('/', eAdmin, async (req, res) => {
                 'id_ome', 'ano',
                 ],
                 where: {
-                    idome: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                    id_ome: [1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                             21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                             41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                             61,62,65,66,67,68,69,70,71,72,73,74,75,76],
@@ -642,11 +627,9 @@ router.get('/', eAdmin, async (req, res) => {
             const countDiariasGercota = querydiariasgercota.length;
             totalPrestarContaPendente = countDiarias - countDiariasGercota;
 
-
     } catch (error) {
         console.error('Erro ao contar eventos do governo:', error);
     }
-
 
     function converterMesPTparaEN(nomeMesPT) {
         switch (nomeMesPT) {
@@ -759,7 +742,7 @@ router.get('/add', eAdmin, async (req, res) => {
         attributes: ['id', 'nome'],
         where: {
             id: {
-                [Op.in]: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                [Op.in]: [1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                         21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                         41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                         61,62,65,66,67,68,69,70,71,72,73,74,75,76
@@ -767,7 +750,7 @@ router.get('/add', eAdmin, async (req, res) => {
             }
         },
         order: [
-            [Sequelize.literal(`FIELD(id, ${[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+            [Sequelize.literal(`FIELD(id, ${[1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                 21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                 41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                 61,62,65,66,67,68,69,70,71,72,73,74,75,76].join(',')})`)],
@@ -882,14 +865,14 @@ router.get('/edit/:id', eAdmin, async (req, res) => {
             attributes: ['id', 'nome'],
             where: {
                 id: {
-                    [Op.in]: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                    [Op.in]: [1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                         21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                         41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                         61,62,65,66,67,68,69,70,71,72,73,74,75,76]
                 }
             },
             order: [
-                [Sequelize.literal(`FIELD(id, ${[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                [Sequelize.literal(`FIELD(id, ${[1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                     21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                     41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                     61,62,65,66,67,68,69,70,71,72,73,74,75,76].join(',')})`)],

@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nome: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       }
     });

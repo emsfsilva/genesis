@@ -14,6 +14,14 @@ const sequelize = db.sequelize; // Importe a instância do Sequelize
   const { Op } = require('sequelize');
 
 router.get('/', eAdmin, async (req, res) => {
+
+  if (req.user.situationId === 4) {
+    req.logout(req.user, () => {
+        req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+        res.redirect('/login');
+    });
+    return; // Impede que o código continue após o logoff
+  }
     
     if (1 !== 0) {
 

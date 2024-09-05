@@ -1,6 +1,7 @@
 // Objeto com diretórios permitidos para cada omeId
 const allowedDirectories = {
-    //1: [TEM ACESSO A TODAS AS ROTAS] DPO
+        //1: [TEM ACESSO A TODAS AS ROTAS] DPO
+        
         2: ["/unidade/dashboard/","/unidade/unidadepjes/","/unidade/unidadepjes/view/", "/unidade/unidadepjes/escalas", "/unidade/unidadepjes/deleteEscala/",
         "unidade/unidadepjes/gerar-arquivo-xls","/unidade/unidadeprofile","/unidade/unidadeprofile/edit","/unidade/unidadeconsultarEscalas",
         "/unidade/unidadeusers","/unidade/unidadediarias/","/unidade/unidadediarias/view/",],

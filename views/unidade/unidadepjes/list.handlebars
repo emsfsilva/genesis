@@ -72,7 +72,7 @@
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = `SJES_{{profile.ome.dataValues.nome}}_{{nomeMes}}_2024_${idEvento}.xlsx`;
+            a.download = `SJES_{{profile.PcontasOme.dataValues.nome}}_{{nomeMes}}_{{nomeAno}}_${idEvento}.xlsx`;
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);

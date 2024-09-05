@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       operacao: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         collate: 'utf8mb4_general_ci'
       },
       cod: {
@@ -19,28 +19,31 @@ module.exports = {
       nunfunc: {
         type: Sequelize.INTEGER
       },
+      nunvinc: {
+        type: Sequelize.INTEGER
+      },
       pg: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       matricula: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       nome: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         collate: 'utf8mb4_general_ci'
       },
       telefone: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(20),
         collate: 'utf8mb4_general_ci'
       },
       status: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       modalidade: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       data_inicio: {
@@ -60,18 +63,18 @@ module.exports = {
         collate: 'utf8mb4_general_ci'
       },
       ome_sgpm: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         collate: 'utf8mb4_general_ci'
       },
       localap: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(200),
         collate: 'utf8mb4_general_ci'
       },
       ttcota: {
         type: Sequelize.INTEGER
       },
       anotacoes: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(200),
         collate: 'utf8mb4_general_ci'
       },
       createdAt: {

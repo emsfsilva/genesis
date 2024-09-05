@@ -44,7 +44,7 @@ router.get('/', eAdmin, async (req, res) => {
                 [Sequelizedpo.literal('SUM(cotaprcdist) * 200'), 'total_cotaprcdist_multiplicado']
             ],
             where: {
-                idome: [1, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
+                idome: [1, 77, 78, 79, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
                 mes,
                 ano,
                 operacao: {
@@ -71,7 +71,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [SequelizeExecutdpo.literal('SUM(ttprcexe) * 200'), 'total_cotaprcexe_multiplicado']
                 ],
                 where: 
-                    {id_ome:[1, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
+                    {id_ome:[1, 77, 78, 79, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
                     mes,
                     ano,
                     operacao: {
@@ -94,7 +94,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [SequelizeDistDpo.literal('SUM(cotaofdist) * 300'), 'valor_cotaofdist_multiplicado'],
                     [SequelizeDistDpo.literal('SUM(cotaprcdist) * 200'), 'valor_cotaprcdist_multiplicado']
                 ],
-                where: {idome:[1, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
+                where: {idome:[1, 77, 78, 79, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
                         mes,
                         ano,
                         operacao: {
@@ -111,7 +111,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [SequelizeExecutDpo.literal('SUM(ttofexe) * 300'), 'valor_cotaofexe_multiplicado'],
                     [SequelizeExecutDpo.literal('SUM(ttprcexe) * 200'), 'valor_cotaprcexe_multiplicado']
                 ],
-                where: {id_ome:[1, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
+                where: {id_ome:[1, 77, 78, 79, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76],
                         mes,
                         ano,
                         operacao: {
@@ -742,7 +742,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [Sequelizeti.literal('SUM(cotaprcdist) * 200'), 'total_cotaprcdist_multiplicado']
                 ],
                 where: 
-                    {idome:[1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], //DPO + OMES da DIM
+                    {idome:[1, 77, 78, 79, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], //DPO + OMES da DIM
                     mes,
                     ano,
                     operacao: "PJES CTM (BRT)",
@@ -766,7 +766,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [SequelizeExecutti.literal('SUM(ttprcexe) * 200'), 'total_cotaprcexe_multiplicado']
                 ],
                 where: 
-                    {id_ome:[1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], //DPO + OMES da DIM
+                    {id_ome:[1, 77, 78, 79, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], //DPO + OMES da DIM
                     mes,
                     ano,
                     operacao: "PJES CTM (BRT)",
@@ -787,7 +787,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [SequelizeDistTi.literal('SUM(cotaofdist) * 300'), 'valor_cotaofdist_multiplicado'],
                     [SequelizeDistTi.literal('SUM(cotaprcdist) * 200'), 'valor_cotaprcdist_multiplicado']
                 ],
-                where: {idome:[1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], //DPO + OMES da DIM
+                where: {idome:[1, 77, 78, 79, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], //DPO + OMES da DIM
                         mes,
                         ano,
                         operacao: "PJES CTM (BRT)",
@@ -802,7 +802,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [SequelizeExecutTi.literal('SUM(ttofexe) * 300'), 'valor_cotaofexe_multiplicado'],
                     [SequelizeExecutTi.literal('SUM(ttprcexe) * 200'), 'valor_cotaprcexe_multiplicado']
                 ],
-                where: {id_ome:[1, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], //DPO + OMES da DIM
+                where: {id_ome:[1, 77, 78, 79, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], //DPO + OMES da DIM
                         mes,
                         ano,
                         operacao: "PJES CTM (BRT)",
@@ -851,7 +851,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [Sequelizeenem.literal('SUM(cotaprcdist) * 200'), 'total_cotaprcdist_multiplicado']
                 ],
                 where: 
-                    {idome:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                    {idome:[1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                             21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                             41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                             61,62],
@@ -878,7 +878,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [SequelizeExecutenem.literal('SUM(ttprcexe) * 200'), 'total_cotaprcexe_multiplicado']
                 ],
                 where: 
-                    {id_ome:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                    {id_ome:[1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                             21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                             41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                             61,62],
@@ -902,7 +902,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [SequelizeDistEnem.literal('SUM(cotaofdist) * 300'), 'valor_cotaofdist_multiplicado'],
                     [SequelizeDistEnem.literal('SUM(cotaprcdist) * 200'), 'valor_cotaprcdist_multiplicado']
                 ],
-                where: {idome:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                where: {idome:[1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                                 21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                                 41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                                 61,62],
@@ -920,7 +920,7 @@ router.get('/', eAdmin, async (req, res) => {
                     [SequelizeExecutEnem.literal('SUM(ttofexe) * 300'), 'valor_cotaofexe_multiplicado'],
                     [SequelizeExecutEnem.literal('SUM(ttprcexe) * 200'), 'valor_cotaprcexe_multiplicado']
                 ],
-                where: {id_ome:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                where: {id_ome:[1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                                 21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                                 41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                                 61,62],
@@ -1033,7 +1033,7 @@ router.get('/', eAdmin, async (req, res) => {
             const querypjes = await db.pjes.findAll({
                 attributes: ['idome', 'ano'],
                 where: {
-                    idome: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                    idome: [1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                             21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                             41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                             61,62,65,66,67,68,69,70,71,72,73,74,75,76],
@@ -1052,7 +1052,7 @@ router.get('/', eAdmin, async (req, res) => {
             const querypjesgercota = await db.pjesgercota.findAll({
                 attributes: ['id_ome', 'ano'],
                 where: {
-                    id_ome: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                    id_ome: [1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                             21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                             41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                             61,62,65,66,67,68,69,70,71,72,73,74,75,76],
@@ -1152,6 +1152,30 @@ router.get('/', eAdmin, async (req, res) => {
 
     const ttServExcPrc = ttServExcessoPrc.length;
     const valorttServExc = (parseFloat(ttServExcOf) * 300) + (parseFloat(ttServExcPrc) * 200);
+    const ttServExc = ttServExcOf + ttServExcPrc;
+
+
+    //TOTAL DE POLICIAIS IMPEDIDOS COM COTA NA OME | COUNT   
+    const contagemImpedidos = await db.escalas.count({
+        attributes: ['id', 'operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome', 'telefone', 'status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
+        where: {
+            data_inicio: {
+                [Op.and]: [
+                    Sequelize.literal(`DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}'`),
+                    Sequelize.literal(`YEAR(data_inicio) = ${nomeAno}`)
+                ]
+            },
+            idome: {
+                [Op.in]: [1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                    21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
+                    41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
+                    61,62,65,66,67,68,69,70,71,72,73,74,75,76]
+            },
+            status: {
+                [Op.like]: 'IMPEDIDO%'
+            }
+        }
+    });
 
 
     // BLOCO QUE CONTA A QUANTIDADE REMANESCENTE DE OFICIAS E PRAÇAS
@@ -1244,8 +1268,8 @@ router.get('/', eAdmin, async (req, res) => {
     .then((pjes) => {
 
         if (pjes.length !== 0) {
-            
-            res.render("admin/pjes/list", {
+
+            return res.render("admin/pjes/list", {
                 layout: 'main', profile: req.user.dataValues, user, nomeMes, nomeAno, sidebarSituations: true,
                 pjes: pjes.map(id => id.toJSON()),
 
@@ -1281,21 +1305,21 @@ router.get('/', eAdmin, async (req, res) => {
                 total_cotaexeenem, totalcotaOfDistEnem, totalcotaPrcDistEnem, totalcotaOfExeEnem,
                 totalcotaPrcExeEnem,
 
-                ctAtualOf,ctAtualPrc, valorGeralInicial, ctGeralInicialOf, ctGeralInicialPrc, valorGeralInicial,
+                ctAtualOf,ctAtualPrc, valorGeralInicial, ctGeralInicialOf, ctGeralInicialPrc, valorGeralInicial, contagemImpedidos,
                 totalcotaDistGov, totalPrestarContaPendente, totalcotaExeGov, totalcotaOfDistGov, totalcotaPrcDistGov, totalcotaOfExeGov,
-                totalcotaPrcExeGov, ttServExcOf, ttServExcPrc, valorttServExc, totalFinalDistRen, totalcotaOfDistRen,
+                totalcotaPrcExeGov, ttServExcOf, ttServExcPrc, ttServExc, valorttServExc, totalFinalDistRen, totalcotaOfDistRen,
                 totalcotaPrcDistRen, SaldoAnualOfGov, SaldoAnualPrcGov, saldoCtRenOfAnual, saldoCtRenPrcAnual,
 
             });
         } else {
-            res.render("admin/pjes/list", {
+            return res.render("admin/pjes/list", {
                 layout: 'main', profile: req.user.dataValues, sidebarSituations: true, danger_msg: 'Erro: Nenhum Evento Cadastrado!'
             });
         }
 
     })
     .catch(() => {
-        res.render("admin/pjes/list", {
+        return res.render("admin/pjes/list", {
             layout: 'main', profile: req.user.dataValues, sidebarSituations: true, danger_msg: 'Erro: Nenhum Evento Cadastrado!'
         });
     });
@@ -1304,6 +1328,19 @@ router.get('/', eAdmin, async (req, res) => {
 
 // Criar a rota para página visualizar os detalhes do registro, usar a função eAdmin com middleware para verificar se o usuário está logado
 router.get('/view/:id', eAdmin, async (req, res) => {
+
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
+
+    
+
+
+
 
     const nomeMes = req.session.mes;
     const { id } = req.params;
@@ -1423,7 +1460,7 @@ router.get('/view/:id', eAdmin, async (req, res) => {
         const valortotaldistribuido = formatoMoedaBrasileira.format(valorttdist);
         const valortotalexecutado = formatoMoedaBrasileira.format(valorttexe);
 
-        res.render("admin/pjes/view", { layout: 'main', profile: req.user.dataValues, nomeMes, sidebarSituations: true, pjes, ttservMes, escalas: escalas.map(id => id.toJSON()), valorofdist, valorprcdist, valortotaldistribuido, cotaofexe, cotaprcexe, valortotalexecutado });
+        return res.render("admin/pjes/view", { layout: 'main', profile: req.user.dataValues, nomeMes, sidebarSituations: true, pjes, ttservMes, escalas: escalas.map(id => id.toJSON()), valorofdist, valorprcdist, valortotaldistribuido, cotaofexe, cotaprcexe, valortotalexecutado });
         
     } else {
         // Criar a mensagem de erro
@@ -1436,6 +1473,14 @@ router.get('/view/:id', eAdmin, async (req, res) => {
 // TELA QUE VISUALIZA O FORM DO EVENTO PJES PARA ADCIONAR
 router.get('/add', eAdmin, async (req, res) => {
 
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
+
     const nomeMes = req.session.mes;
     const nomeAno = req.session.ano;
     var dataForm = [];
@@ -1445,14 +1490,14 @@ router.get('/add', eAdmin, async (req, res) => {
         attributes: ['id', 'nome'],
         where: {
             id: {
-                [Op.in]: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                [Op.in]: [1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                         21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                         41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                         61,62,65,66,67,68,69,70,71,72,73,74,75,76]
             }
         },
         order: [
-            [Sequelize.literal(`FIELD(id, ${[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+            [Sequelize.literal(`FIELD(id, ${[1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                 21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                 41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                 61,62,65,66,67,68,69,70,71,72,73,74,75,76].join(',')})`)],
@@ -1465,235 +1510,24 @@ router.get('/add', eAdmin, async (req, res) => {
     }
 
     // Pausar o processamento, carregar a view, carregar o layout main, indicar qual item de menu deve ficar ativo
-    res.render('admin/pjes/add', { layout: 'main', profile: req.user.dataValues, data: dataForm, nomeMes, nomeAno, sidebarSituations: true });
+    return res.render('admin/pjes/add', { layout: 'main', profile: req.user.dataValues, data: dataForm, nomeMes, nomeAno, sidebarSituations: true });
 
 });
 
-
-/*// TELA QUE ADCIONA (CREATE) O EVENTO PJES
-router.post('/add', eAdmin, async (req, res) => {
-
-    const nomeMes = req.session.mes;
-    const nomeAno = req.session.ano;
-    
-    // Receber os dados do formulário
-    var data = req.body;
-
-
-    if (data.idome === '1') {
-        data.iddiretoria = '1';
-    } else if (data.idome === '2') {
-        data.iddiretoria = '2';
-    } else if (data.idome === '3') {
-        data.iddiretoria = '3';
-    } else if (data.idome === '4') {
-        data.iddiretoria = '4';
-    } else if (data.idome === '5') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '6') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '7') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '8') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '9') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '10') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '11') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '12') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '13') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '14') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '15') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '16') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '17') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '18') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '19') {
-        data.iddiretoria = '2';
-    }else if (data.idome === '20') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '21') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '22') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '23') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '24') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '25') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '26') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '27') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '28') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '29') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '30') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '31') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '32') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '33') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '34') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '35') {
-        data.iddiretoria = '3';
-    }else if (data.idome === '36') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '37') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '38') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '39') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '40') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '41') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '42') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '43') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '44') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '45') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '46') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '47') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '48') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '49') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '50') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '51') {
-        data.iddiretoria = '4';
-    }else if (data.idome === '52') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '53') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '54') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '55') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '56') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '57') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '58') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '59') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '60') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '61') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '62') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '63') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '64') {
-        data.iddiretoria = '5';
-    }else if (data.idome === '65') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '66') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '67') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '68') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '69') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '70') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '71') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '72') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '73') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '74') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '75') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '76') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '77') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '78') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '79') {
-        data.iddiretoria = '1';
-    }else if (data.idome === '80') {
-        data.iddiretoria = '1';
-    } else {
-        // Defina um valor padrão ou tratamento para outros casos, se necessário
-    }
-
-
-    if (data.operacao === 'PJES GOVERNO REGULAR') {
-        data.cod = '247';
-    } else if (data.operacao === 'PJES GOVERNO REGULAR') {
-        data.cod = '248';
-    }else if (data.operacao === 'PJES CTM (BRT)') {
-        data.cod = '255';
-    }else if (data.operacao === 'PJES PATULHA ESCOLAR') {
-        data.cod = '263';
-    }else if (data.operacao === 'PJES OP ENEM') {
-        data.cod = '250';
-    } else {
-    }
-
-
-    // Validar os campos utilizando o yup   
-    const schema = yup.object().shape({
-
-        evento: yup.string("Erro: Necessário preencher o evento!")
-            .required("Erro: Necessário preencher o campo nome!")
-    });
-
-    // Verificar se todos os campos passaram pela validação
-    try {
-        await schema.validate(data);
-    } catch (error) {
-        // Pausar o processamento e carregar a view enviando os dados que o usuário havia preenchido no formulário
-        return res.render("admin/pjes/add", { layout: 'main', profile: req.user.dataValues, sidebarSituations: true, data, danger_msg: error.errors });
-    }
-
-    // Cadastrar no banco de dados
-    db.pjes.create(data).then(() => {
-
-        // Criar a mensagem de situação cadastrado com sucesso, e-mail enviado
-        req.flash("success_msg", "Evento cadastrado!");
-        
-
-        res.redirect(`/pjes?mes=${nomeMes}&ano=${nomeAno}`);
-        //res.redirect('/pjes?mes=' + req.session.mes);
-    }).catch(() => {
-        // Pausar o processamento e carregar a view enviando os dados que o usuário havia preenchido no formulário
-        return res.render("admin/pjes/add", { layout: 'main', profile: req.user.dataValues, sidebarSituations: true, data: req.body, danger_msg: "Erro: Pjes não cadastrado com sucesso!" });
-
-    });
-
-});
-*/
 
 // TELA QUE ADCIONA (CREATE) O EVENTO PJES
 router.post('/add', eAdmin, async (req, res) => {
+
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
+
+
+
     const nomeMes = req.session.mes;
     const nomeAno = req.session.ano;
     
@@ -1761,6 +1595,14 @@ router.post('/add', eAdmin, async (req, res) => {
 // TELA QUE VISUALIZA O FORM DA EDIÇÃO DO EVENTO
 router.get('/edit/:id', eAdmin, async (req, res) => {
 
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
+
     const nomeMes = req.session.mes;
     const nomeAno = req.session.ano;
 
@@ -1793,14 +1635,14 @@ router.get('/edit/:id', eAdmin, async (req, res) => {
             attributes: ['id', 'nome'],
             where: {
                 id: {
-                    [Op.in]: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                    [Op.in]: [1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                             21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                             41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                             61,62,65,66,67,68,69,70,71,72,73,74,75,76]
                 }
             },
             order: [
-                [Sequelize.literal(`FIELD(id, ${[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
+                [Sequelize.literal(`FIELD(id, ${[1,77,78,79,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,20,
                     21,22,23,24,25,26,27,28,29,30,31,32,33,36,37,38,39,40,
                     41,42,43,44,45,46,47,48,49,52,53,54,55,56,57,58,59,60,
                     61,62,65,66,67,68,69,70,71,72,73,74,75,76].join(',')})`)],
@@ -1814,18 +1656,27 @@ router.get('/edit/:id', eAdmin, async (req, res) => {
         
 
         // Pausar o processamento, carregar a view, carregar o layout main, indicar qual item de menu deve ficar ativo
-        res.render('admin/pjes/edit', { layout: 'main', profile: req.user.dataValues, nomeMes, nomeAno, data: dataForm, sidebarSituations: true });
+        return res.render('admin/pjes/edit', { layout: 'main', profile: req.user.dataValues, nomeMes, nomeAno, data: dataForm, sidebarSituations: true });
         
     } else {
         // Criar a mensagem de erro
         req.flash("danger_msg", "Erro: PJES não encontrado!");
         // Redirecionar o usuário
-        res.redirect('/pjes?page=1');
+        return res.redirect('/pjes?page=1');
     }
 });
 
 //TELA QUE EDITA (UPDATE) O EVENTO PJES
 router.post('/edit', eAdmin, async (req, res) => {
+
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
+
     // Receber os dados do formulário
     var data = req.body;
     const nomeMes = req.session.mes;
@@ -1843,11 +1694,11 @@ router.post('/edit', eAdmin, async (req, res) => {
 
         // Mensagem de sucesso e redirecionamento
         req.flash("success_msg", "PJES editado com sucesso!");
-        res.redirect(`/pjes?mes=${nomeMes}&ano=${nomeAno}`);
+        return res.redirect(`/pjes?mes=${nomeMes}&ano=${nomeAno}`);
     } catch (error) {
         // Em caso de erro ao editar no banco de dados
         console.error("Erro ao editar PJES:", error);
-        res.render('admin/pjes/edit', { 
+        return res.render('admin/pjes/edit', { 
             layout: 'main', 
             profile: req.user.dataValues, 
             data: data, 
@@ -1862,6 +1713,14 @@ router.post('/edit', eAdmin, async (req, res) => {
 // TELA QUE VISUALIZA (GET) A ESCALA
 router.get('/escalas', eAdmin, async (req, res) => {
 
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
+
     const nomeMes = req.session.mes;
     var dataForm = [];
     const omes = await db.omes.findAll({
@@ -1872,7 +1731,7 @@ router.get('/escalas', eAdmin, async (req, res) => {
         dataForm['omes'] = omes;
     }
 
-    res.render('admin/pjes/add', { layout: 'main', profile: req.user.dataValues, nomeMes, data: dataForm, sidebarSituations: true });
+    return res.render('admin/pjes/add', { layout: 'main', profile: req.user.dataValues, nomeMes, data: dataForm, sidebarSituations: true });
 
 });
 
@@ -1882,6 +1741,15 @@ const moment = require('moment');
 moment.locale('pt-br');
 
 router.post('/escalas/:id', eAdmin, async (req, res) => {
+
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
+
     const nomeMes = req.session.mes;
 
     const { data_inicio, hora_inicio, hora_fim, data_fim, ...dataFormulario } = req.body;
@@ -2020,6 +1888,23 @@ router.post('/escalas/:id', eAdmin, async (req, res) => {
         return res.render("admin/pjes/list", { layout: 'main', profile: req.user.dataValues, sidebarSituations: true, data: { ...dataFormulario, data_inicio }, danger_msg: "Erro: Mês diferente do selecionado!" });
     }
 
+    // Metodo para impedir que o policial seja lançado na mesma data
+    const dataInicioFormatada = dataInicioMoment.format('YYYY-MM-DD');
+    const matricula = dataFormulario.matricula;
+
+    // Consultar o banco de dados para verificar se a matrícula já existe com a mesma data
+    const matriculaComDataExistente = await db.escalas.findOne({
+        where: {
+            matricula: matricula,
+            data_inicio: dataInicioFormatada
+        }
+    });
+
+    if (matriculaComDataExistente) {
+        req.flash("danger_msg", "Policial Não Adiciondo. Já consta nesta data!");
+        return res.redirect('/unidade/unidadepjes/view/' + escalas.id);
+    }
+
     // Se os meses forem iguais ou não houver registro encontrado
     if (escalas) {
         const dataSalvar = {
@@ -2032,7 +1917,7 @@ router.post('/escalas/:id', eAdmin, async (req, res) => {
         db.escalas.create(dataSalvar)
             .then(() => {
                 req.flash("success_msg", "Policial Adicionado!");
-                res.redirect('/pjes/view/' + escalas.id);
+                return res.redirect('/pjes/view/' + escalas.id);
             })
             .catch(() => {
                 return res.render("admin/pjes/list", { layout: 'main', profile: req.user.dataValues, nomeMes, sidebarSituations: true, data: { ...dataFormulario, data_inicio }, danger_msg: "Erro: Pjes não cadastrado com sucesso!" });
@@ -2042,6 +1927,16 @@ router.post('/escalas/:id', eAdmin, async (req, res) => {
 
 // Criar a rota apagar situação no BD, usar a função eAdmin com middleware para verificar se o usuário está logado
 router.get('/delete/:id', async (req, res) => {
+
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
+
+
     // Recuperar o registro do banco de dados para verificar se a situação está sendo utilizada por algum usuário
     const pjes = await db.pjes.findOne({
         // Indicar quais colunas recuperar
@@ -2063,18 +1958,26 @@ router.get('/delete/:id', async (req, res) => {
         req.flash("success_msg", "Evento excluido com sucesso!");
 
         // Redirecionar o usuário após apagar com sucesso
-        res.redirect('/pjes?page=1');
+        return res.redirect('/pjes?page=1');
     }).catch(() => {
         // Criar a mensagem de situação não apagada
         req.flash("danger_msg", "Evento não pode ser Excluído devido a ter Policiais Escalados");
 
         // Redirecionar o usuário após não apagar
-        res.redirect('/pjes/view/' + req.params.id);
+        return res.redirect('/pjes/view/' + req.params.id);
     })    
 });
 
 // Criar a rota para página com formulário cadastrar situação, usar a função eAdmin com middleware para verificar se o usuário está logado
 router.get('/pjesgercota/:id', eAdmin, async (req, res) => {
+
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
 
    // Receber o id enviado na URL
    const { id } = req.params;
@@ -2130,32 +2033,50 @@ router.get('/pjesgercota/:id', eAdmin, async (req, res) => {
         var dataForm = pjes.dataValues;
 
         // Pausar o processamento, carregar a view, carregar o layout main, indicar qual item de menu deve ficar ativo
-        res.render('admin/pjes/pjesgercota', { layout: 'main', profile: req.user.dataValues, pjes, data: dataForm, total_prestarconta, nomesEventosporome, sidebarSituations: true });
+        return res.render('admin/pjes/pjesgercota', { layout: 'main', profile: req.user.dataValues, pjes, data: dataForm, total_prestarconta, nomesEventosporome, sidebarSituations: true });
 
     } else {
         // Criar a mensagem de erro
         req.flash("danger_msg", "Erro: Prestação de conta com Erro!");
         // Redirecionar o usuário
-        res.redirect('/pjes?page=1');
+        return res.redirect('/pjes?page=1');
     }
 
 });
 
 // SALVAR PRESTAÇÃO CONTA
 router.post('/pjesgercota', eAdmin, async (req, res) => {
+
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
+
+
     var data = req.body;
     var dataForm = req.body;
 
     db.pjesgercota.update(data, { where: {id: data.id} }).then(() => {
         req.flash("success_msg", "Prestação de Conta Concluida com Sucesso!");
-        res.redirect('/pjes?page=1');
+        return res.redirect('/pjes?page=1');
     }).catch(() => {
-        res.render('admin/pjes/edit', { layout: 'main', profile: req.user.dataValues, data: dataForm, sidebarSituations: true, danger_msg: "Erro na Prestação de Conta!" });
+        return res.render('admin/pjes/edit', { layout: 'main', profile: req.user.dataValues, data: dataForm, sidebarSituations: true, danger_msg: "Erro na Prestação de Conta!" });
     });
 });
 
 // Criar a rota apagar situação no BD, usar a função eAdmin com middleware para verificar se o usuário está logado
 router.get('/deleteEscala/:id', async (req, res) => {
+
+    if (req.user.situationId != 1) {
+        req.logout(req.user, () => {
+            req.flash("danger_msg", "Você foi deslogado. Acesso não Autorizado");
+            res.redirect('/login');
+        });
+        return; // Impede que o código continue após o logoff
+    }
 
     const escalas = await db.escalas.findOne({    
         attributes: ['id'],
@@ -2171,14 +2092,14 @@ router.get('/deleteEscala/:id', async (req, res) => {
 
     }).then(() => {
         req.flash("success_msg", "Policial apagado com sucesso!");
-        res.redirect('/pjes/view/');
+        return res.redirect('/pjes/view/');
         
     }).catch(() => {
         // Criar a mensagem de situação não apagada
         req.flash("danger_msg", "Policial não apagado com sucesso!");
 
         // Redirecionar o usuário após não apagar
-        res.redirect('/pjes/view/');
+        return res.redirect('/pjes/view/');
     })    
 });
 
@@ -2194,8 +2115,12 @@ router.get('/buscarSgpm/:matricula', async (req, res) => {
     try {
         // Obtendo dados do sgpm
         const dadoSgpm = await db.sgpms.findOne({
-            where: { matricula: matricula },
-            attributes: ['id', 'pg', 'nome', 'ome', 'status', 'nunfunc', 'localap', 'createdAt', 'updatedAt']
+            where: {
+                matricula: matricula,
+                mes: nomeMes,
+                ano: nomeAno
+            },
+            attributes: ['id', 'pg', 'nome', 'ome', 'status', 'nunfunc', 'nunvinc', 'localap', 'createdAt', 'updatedAt']
         });
 
         function converterMesPTparaEN(nomeMesPT) {
@@ -2257,6 +2182,7 @@ router.get('/buscarSgpm/:matricula', async (req, res) => {
                 ome: dadoSgpm.ome,
                 status: dadoSgpm.status,
                 nunfunc: dadoSgpm.nunfunc,
+                nunvinc: dadoSgpm.nunvinc,
                 localap: dadoSgpm.localap,
                 servicosDetalhados: servicosDetalhados // Adiciona o array de serviços detalhados ao objeto
             };
@@ -2312,7 +2238,7 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
 
         const nomeMesConvertido = converterMesPTparaEN(nomeMes);
         const escalas = await db.escalas.findAll({
-            attributes: ['id','operacao', 'cod', 'nunfunc', 'pg', 'matricula', 'nome','telefone','status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
+            attributes: ['id','operacao', 'cod', 'nunfunc', 'nunvinc', 'pg', 'matricula', 'nome','telefone','status', 'modalidade', 'data_inicio', 'hora_inicio', 'data_fim', 'hora_fim', 'ome_sgpm', 'localap', 'ttcota', 'anotacoes', 'idevento', 'idome', 'createdAt', 'updatedAt'],
             where: Sequelize.literal(`DATE_FORMAT(data_inicio, '%b') = '${nomeMesConvertido}' AND YEAR(data_inicio) = ${nomeAno}`),
         });
     
@@ -2327,10 +2253,10 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         let countD3 = 0;
         escalas.forEach(escala => {
             if ((escala.pg === 'CEL' || escala.pg === 'TC'|| escala.pg === 'MAJ'|| escala.pg === 'CAP'|| escala.pg === '1º TEN'|| escala.pg === '2º TEN'|| escala.pg === 'ASP') && escala.cod === 247) {
-                countD2++;
+                countD2+= escala.ttcota;
             }
             if ((escala.pg === 'SUBTEN' || escala.pg === '1º SGT' || escala.pg === '2º SGT'|| escala.pg === '3º SGT'|| escala.pg === 'CB'|| escala.pg === 'SD') && escala.cod === 247) {
-                countD3++;
+                countD3+= escala.ttcota;
             }
         });
 
@@ -2339,10 +2265,10 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         let countG3 = 0;
         escalas.forEach(escala => {
             if ((escala.pg === 'CEL' || escala.pg === 'TC'|| escala.pg === 'MAJ'|| escala.pg === 'CAP'|| escala.pg === '1º TEN'|| escala.pg === '2º TEN'|| escala.pg === 'ASP') && escala.cod === 255) {
-                countG2++;
+                countG2+= escala.ttcota;
             }
             if ((escala.pg === 'SUBTEN' || escala.pg === '1º SGT' || escala.pg === '2º SGT'|| escala.pg === '3º SGT'|| escala.pg === 'CB'|| escala.pg === 'SD') && escala.cod === 255) {
-                countG3++;
+                countG3+= escala.ttcota;
             }
         });
 
@@ -2352,10 +2278,10 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         let countJ3 = 0;
         escalas.forEach(escala => {
             if ((escala.pg === 'CEL' || escala.pg === 'TC'|| escala.pg === 'MAJ'|| escala.pg === 'CAP'|| escala.pg === '1º TEN'|| escala.pg === '2º TEN'|| escala.pg === 'ASP') && escala.cod === 250) {
-                countJ2++;
+                countJ2+= escala.ttcota;
             }
             if ((escala.pg === 'SUBTEN' || escala.pg === '1º SGT' || escala.pg === '2º SGT'|| escala.pg === '3º SGT'|| escala.pg === 'CB'|| escala.pg === 'SD') && escala.cod === 250) {
-                countJ3++;
+                countJ3+= escala.ttcota;
             }
         });
 
@@ -2365,16 +2291,16 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         let countM3 = 0;
         escalas.forEach(escala => {
             if ((escala.pg === 'CEL' || escala.pg === 'TC'|| escala.pg === 'MAJ'|| escala.pg === 'CAP'|| escala.pg === '1º TEN'|| escala.pg === '2º TEN'|| escala.pg === 'ASP') && escala.cod === 263) {
-                countM2++;
+                countM2+= escala.ttcota;
             }
             if ((escala.pg === 'SUBTEN' || escala.pg === '1º SGT' || escala.pg === '2º SGT'|| escala.pg === '3º SGT'|| escala.pg === 'CB'|| escala.pg === 'SD') && escala.cod === 263) {
-                countM3++;
+                countM3+= escala.ttcota;
             }
         });
 
         
         const workbook = new Excel.Workbook();
-        const worksheet = workbook.addWorksheet('Escalas');
+        const worksheet = workbook.addWorksheet('PJES_'+`${req.user.PcontasOme.dataValues.nome} - ${nomeMes}_${nomeAno}`);
 
         const fs = require('fs');
         const path = require('path');
@@ -2398,7 +2324,7 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         // Adicionando o nome no topo
         worksheet.mergeCells('A5:K5'); // Mescla as células de A1 até K1
         const headerCell = worksheet.getCell('A5');
-        headerCell.value = 'PRESTAÇÃO DE CONTAS - PJES |'+`${req.user.ome.dataValues.nome} - ${nomeMes}_${nomeAno} | ${req.user.dataValues.name} - ${req.user.dataValues.telefone}`; // Substitua com o nome desejado
+        headerCell.value = 'PRESTAÇÃO DE CONTAS - PJES |'+`${req.user.PcontasOme.dataValues.nome} - ${nomeMes}_${nomeAno} | ${req.user.dataValues.name} - ${req.user.dataValues.telefone}`; // Substitua com o nome desejado
         headerCell.font = { size: 12, bold: true };
         headerCell.alignment = { horizontal: 'center' };
         headerCell.fill = {
@@ -2440,10 +2366,10 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
                 escala.matricula,
                 escala.operacao,
                 escala.nunfunc,
-                1,
+                escala.nunvinc,
                 escala.data_inicio,
                 escala.data_inicio, // Por padrão, estou assumindo que data_inicio e data_fim são formatados corretamente
-                1,
+                escala.ttcota,
                 escala.cod,
                 ' ',
                 escala.pg,
@@ -2468,7 +2394,7 @@ router.get('/gerar-arquivo-xls', eAdmin, async (req, res) => {
         worksheet.getCell('G3').value = countG3;
 
 
-        worksheet.getCell('I1:J1').value = 'PJES GOVERNO OP ENEM';
+        worksheet.getCell('I1:J1').value = 'PJES GOVERNO FEDERAL';
         worksheet.getCell('I2').value = 'Oficiais';
         worksheet.getCell('I3').value = 'Praças';
 

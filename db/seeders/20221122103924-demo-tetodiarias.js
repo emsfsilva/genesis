@@ -67,6 +67,366 @@ module.exports = {
         mes: 12,
         ano: 2024
       },
+      {
+        ctgeralinicial: 32978,
+        mes: 1,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 2,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 3,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 4,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 5,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 6,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 7,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 8,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 9,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 10,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 11,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 12,
+        ano: 2025
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 1,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 2,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 3,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 4,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 5,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 6,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 7,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 8,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 9,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 10,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 11,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 12,
+        ano: 2026
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 1,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 2,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 3,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 4,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 5,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 6,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 7,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 8,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 9,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 10,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 11,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 12,
+        ano: 2027
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 1,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 2,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 3,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 4,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 5,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 6,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 7,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 8,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 9,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 10,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 11,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 12,
+        ano: 2028
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 1,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 2,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 3,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 4,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 5,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 6,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 7,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 8,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 9,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 10,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 11,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 12,
+        ano: 2029
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 1,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 2,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 3,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 4,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 5,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 6,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 7,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 8,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 9,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 10,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 11,
+        ano: 2030
+      },
+      {
+        ctgeralinicial: 32978,
+        mes: 12,
+        ano: 2030
+      },
                   
   ]);
   },
